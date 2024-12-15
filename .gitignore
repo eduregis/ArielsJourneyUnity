@@ -58,6 +58,9 @@ sysinfo.txt
 *.unitypackage.meta
 *.app
 
+# TextMesh Pro generated in Library file
+/Library/TextMesh Pro/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
