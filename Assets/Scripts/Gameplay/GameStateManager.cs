@@ -1,6 +1,5 @@
-using System.Collections;
+// GameStateManager.cs
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameStateManager : MonoBehaviour {
     public static GameStateManager Instance;
@@ -35,23 +34,12 @@ public class GameStateManager : MonoBehaviour {
             Debug.LogError($"Dialogue {dialogueId} not found in Stage {currentStage.stageId}!");
             return;
         }
-
+        Debug.Log($"Loaded dialogue: {currentDialogue.firstCardText}, {currentDialogue.secondCardText}");
         UpdateUI();
     }
 
     private void UpdateUI() {
-        UIManager.Instance.UpdateDialogueUI(
-        currentDialogue.descriptionText,
-        currentDialogue.firstCardText,
-        currentDialogue.secondCardText,
-        currentDialogue.firstCardImage,
-        currentDialogue.secondCardImage
-    );
-
-        UIManager.Instance.SetButtonListeners(
-            () => OnChoiceSelected(currentDialogue.nextFirstDialogueId),
-            () => OnChoiceSelected(currentDialogue.nextSecondDialogueId)
-        );
+        UIManager.Instance.UpdateUI(currentDialogue);
     }
 
     private void OnChoiceSelected(int nextDialogueId) {

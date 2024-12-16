@@ -1,16 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
 
-    [Header("Dialogue UI")]
-    public TextMeshProUGUI descriptionText; // Alterado para TextMeshProUGUI
-    public Button firstButton;
-    public Button secondButton;
-    public Image firstCardImage;
-    public Image secondCardImage;
+    public GameObject tableContainer;
+    public TextMeshProUGUI descriptionText;
+    public GameObject firstCard;
+    public GameObject secondCard;
+    public CardFlip firstCardFlip;
+    public CardFlip secondCardFlip;
+
+    public ScrollText scrollText;
 
     private void Awake() {
         if (Instance == null) {
@@ -20,54 +22,40 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Atualiza o texto e imagens da UI para o diálogo atual.
-    /// </summary>
-    /// <param name="description">Texto do diálogo.</param>
-    /// <param name="firstButtonText">Texto do primeiro botão.</param>
-    /// <param name="secondButtonText">Texto do segundo botão.</param>
-    /// <param name="firstImage">Sprite para a imagem do primeiro botão (opcional).</param>
-    /// <param name="secondImage">Sprite para a imagem do segundo botão (opcional).</param>
-    public void UpdateDialogueUI(
-        string description,
-        string firstCardText,
-        string secondCardText,
-        Sprite firstImage = null,
-        Sprite secondImage = null
-    ) {
-        // Atualiza os textos
-        descriptionText.text = description;
-        Debug.Log(description + " , " + firstCardText + " , " + secondCardText + " , " + firstImage  + " , " + secondImage);
-        firstButton.GetComponentInChildren<TextMeshProUGUI>().text = firstCardText;
-        secondButton.GetComponentInChildren<TextMeshProUGUI>().text = secondCardText;
-
-        // Atualiza as imagens
-        UpdateButtonImage(firstCardImage, firstImage);
-        UpdateButtonImage(secondCardImage, secondImage);
+    public void UpdateUI(Dialogue dialogue) {
+        StartCoroutine(SetupNewDialogue(dialogue));
     }
 
-    /// <summary>
-    /// Adiciona listeners para os botões de escolha.
-    /// </summary>
-    /// <param name="onFirstChoice">Ação para o primeiro botão.</param>
-    /// <param name="onSecondChoice">Ação para o segundo botão.</param>
-    public void SetButtonListeners(UnityEngine.Events.UnityAction onFirstChoice, UnityEngine.Events.UnityAction onSecondChoice) {
-        firstButton.onClick.RemoveAllListeners();
-        secondButton.onClick.RemoveAllListeners();
-
-        firstButton.onClick.AddListener(onFirstChoice);
-        secondButton.onClick.AddListener(onSecondChoice);
+    IEnumerator SetupNewDialogue(Dialogue dialogue) {
+        FlipCards();
+        yield return new WaitForSeconds(2.0f);
+        tableContainer.SetActive(true);
+        StartWritingText(dialogue.descriptionText);
+        PrepareCards(dialogue.firstCardText, dialogue.secondCardText);
     }
 
-    /// <summary>
-    /// Atualiza a imagem do botão ou oculta se a imagem for nula.
-    /// </summary>
-    private void UpdateButtonImage(Image buttonImage, Sprite sprite) {
-        if (sprite != null) {
-            buttonImage.sprite = sprite;
-            buttonImage.gameObject.SetActive(true);
+    private void StartWritingText(string text) {
+        // Começa a digitação do texto no pergaminho
+        if (scrollText != null) {
+            scrollText.TypeText(text);
         } else {
-            buttonImage.gameObject.SetActive(false);
+            Debug.LogError("ScrollText is not assigned in the UIManager!");
         }
+    }
+
+    private void PrepareCards(string firstCardText, string secondCardText) {
+        firstCardFlip.SetCardText(firstCardText);
+        secondCardFlip.SetCardText(secondCardText);
+    }
+
+    public void FlipCards() {
+        // Quando o texto terminar de ser escrito, viramos as cartas
+        firstCardFlip.FlipCard();
+        secondCardFlip.FlipCard();
+    }
+
+
+    public void SetButtonListeners(UnityEngine.Events.UnityAction firstAction, UnityEngine.Events.UnityAction secondAction) {
+        // Defina os listeners dos botões de escolha
     }
 }

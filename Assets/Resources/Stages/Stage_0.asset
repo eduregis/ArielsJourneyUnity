@@ -16,7 +16,7 @@ MonoBehaviour:
   nextStageId: 0
   dialogues:
   - dialogueId: 0
-    descriptionText: testando card 1
+    descriptionText: testando card 1 testandod 1 testando card 1 testandod 1
     firstCardText: card1
     secondCardText: card2
     firstCardImage: {fileID: 0}

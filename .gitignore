@@ -59,7 +59,7 @@ sysinfo.txt
 *.app
 
 # TextMesh Pro generated in Library file
-/Library/TextMesh Pro/
+/Assets/TextMesh Pro/
 
 # Crashlytics generated file
 crashlytics-build.properties
