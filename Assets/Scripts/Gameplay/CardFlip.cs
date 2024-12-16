@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class CardFlip : MonoBehaviour {
     public GameObject frontCard;
     public GameObject backCard;
     public TextMeshProUGUI frontCardText;
     public float flipDuration = 0.5f;
-    private bool isFlipped = false;
-    private bool isFlipping = false;
+    public  bool isFlipped = false;
+    public bool isFlipping = false;
 
     private void Update() {
         if (isFlipped) {
@@ -44,5 +45,36 @@ public class CardFlip : MonoBehaviour {
         } else {
             Debug.LogError("TextMeshProUGUI component is missing on the front card!");
         }
+    }
+
+    public void AnimateSelection(float duration, System.Action onComplete = null) {
+        StartCoroutine(SelectionAnimation(duration, onComplete));
+    }
+
+    private IEnumerator SelectionAnimation(float duration, System.Action onComplete) {
+        Vector3 originalScale = transform.localScale;
+        Vector3 largerScale = originalScale * 1.2f; // Define o tamanho ampliado da carta
+        float halfDuration = duration / 2;
+
+        // Crescer
+        float elapsedTime = 0f;
+        while (elapsedTime < halfDuration) {
+            transform.localScale = Vector3.Lerp(originalScale, largerScale, elapsedTime / halfDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = largerScale;
+
+        // Diminuir
+        elapsedTime = 0f;
+        while (elapsedTime < halfDuration) {
+            transform.localScale = Vector3.Lerp(largerScale, originalScale, elapsedTime / halfDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = originalScale;
+
+        // Callback
+        onComplete?.Invoke();
     }
 }

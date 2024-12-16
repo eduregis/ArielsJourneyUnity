@@ -22,16 +22,21 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void UpdateUI(Dialogue dialogue) {
-        StartCoroutine(SetupNewDialogue(dialogue));
+    private void Start() {
+        GameplayAnchorManager.Instance.ShowContainer(false);
+        FlipCards();
+        GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Top, 2f, () => {
+            GameStateManager.Instance.StartGame();
+        });
+        
     }
 
-    IEnumerator SetupNewDialogue(Dialogue dialogue) {
-        FlipCards();
-        yield return new WaitForSeconds(2.0f);
-        tableContainer.SetActive(true);
-        StartWritingText(dialogue.descriptionText);
-        PrepareCards(dialogue.firstCardText, dialogue.secondCardText);
+    public void UpdateUI(Dialogue dialogue) {
+        GameplayAnchorManager.Instance.ShowContainer(true);
+        GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Middle, 0.5f, () => {
+            StartWritingText(dialogue.descriptionText);
+            PrepareCards(dialogue.firstCardText, dialogue.secondCardText);
+        });
     }
 
     private void StartWritingText(string text) {

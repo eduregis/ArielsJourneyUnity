@@ -15,8 +15,9 @@ public class GameStateManager : MonoBehaviour {
         }
     }
 
-    private void Start() {
-        LoadStage(0); // Inicializa com o Stage 0
+    // Inicia o game com Stage 0 
+    public void StartGame() {
+        LoadStage(0);
     }
 
     private void LoadStage(int stageId) {
@@ -25,7 +26,7 @@ public class GameStateManager : MonoBehaviour {
             Debug.LogError($"Stage {stageId} not found in Resources!");
             return;
         }
-        LoadDialogue(0); // Começa pelo primeiro diálogo do estágio
+        LoadDialogue(0);
     }
 
     private void LoadDialogue(int dialogueId) {
@@ -41,6 +42,26 @@ public class GameStateManager : MonoBehaviour {
     private void UpdateUI() {
         UIManager.Instance.UpdateUI(currentDialogue);
     }
+
+    public void OnCardSelected(CardFlip selectedCard) {
+        if (selectedCard == null || selectedCard.isFlipping) {
+            Debug.LogWarning("Card is already flipping or null!");
+            return;
+        }
+
+        // Anima a seleção da carta
+        selectedCard.AnimateSelection(0.5f, () => {
+            Debug.Log($"Card selected: {selectedCard.frontCardText.text}");
+            // Processar a escolha da carta aqui
+            ProcessCardChoice(selectedCard);
+        });
+    }
+
+    private void ProcessCardChoice(CardFlip selectedCard) {
+        Debug.Log($"Processing choice for card: {selectedCard.frontCardText.text}");
+        // Avançar diálogo, carregar nova cena ou processar lógica do jogo
+    }
+
 
     private void OnChoiceSelected(int nextDialogueId) {
         if (nextDialogueId == -1) { // Supondo que -1 significa fim do Stage
