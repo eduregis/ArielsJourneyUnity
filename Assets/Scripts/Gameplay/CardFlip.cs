@@ -1,14 +1,18 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CardFlip : MonoBehaviour {
     public GameObject frontCard;
     public GameObject backCard;
     public TextMeshProUGUI frontCardText;
+    public Image cardImage;
     public float flipDuration = 0.5f;
     public  bool isFlipped = false;
     public bool isFlipping = false;
+
+    public bool isSelected = false;
 
     private void Update() {
         if (isFlipped) {
@@ -42,13 +46,36 @@ public class CardFlip : MonoBehaviour {
     public void SetCardText(string frontText) {
         if (frontCardText != null) {
             frontCardText.text = frontText;
+            isSelected = false;
         } else {
             Debug.LogError("TextMeshProUGUI component is missing on the front card!");
         }
     }
 
+    public void SetCardImage(string imageName) {
+       if (string.IsNullOrEmpty(imageName)) {
+            Debug.LogError("Image name is null or empty!");
+            return;
+        }
+
+        string imagePathPrefix = "Images/Cards/";
+        string fullPath = imagePathPrefix + imageName;
+
+        Sprite loadedSprite = Resources.Load<Sprite>(fullPath);
+
+        if (loadedSprite != null) {
+            cardImage.sprite = loadedSprite;
+            Debug.Log($"Image '{imageName}' successfully loaded and applied.");
+        } else {
+            Debug.LogError($"Image '{imageName}' not found in Resources folder!");
+        }
+    }
+
     public void AnimateSelection(float duration, System.Action onComplete = null) {
-        StartCoroutine(SelectionAnimation(duration, onComplete));
+        if (!isSelected && !isFlipped) {
+            isSelected = true;
+            StartCoroutine(SelectionAnimation(duration, onComplete));
+        }
     }
 
     private IEnumerator SelectionAnimation(float duration, System.Action onComplete) {

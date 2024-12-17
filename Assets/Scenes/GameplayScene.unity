@@ -180,6 +180,8 @@ GameObject:
   m_Component:
   - component: {fileID: 499157452}
   - component: {fileID: 499157451}
+  - component: {fileID: 499157454}
+  - component: {fileID: 499157453}
   m_Layer: 5
   m_Name: SecondCard
   m_TagString: Untagged
@@ -202,7 +204,10 @@ MonoBehaviour:
   frontCard: {fileID: 918211840}
   backCard: {fileID: 1615422222}
   frontCardText: {fileID: 691303550}
-  flipDuration: 0.5
+  flipDuration: 0.2
+  isFlipped: 0
+  isFlipping: 0
+  isSelected: 0
 --- !u!224 &499157452
 RectTransform:
   m_ObjectHideFlags: 0
@@ -224,6 +229,40 @@ RectTransform:
   m_AnchoredPosition: {x: 600, y: 0}
   m_SizeDelta: {x: 400, y: 695}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &499157453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499157450}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 400, y: 695, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &499157454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499157450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc59bbcce59fbc4280451eedf1c75d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardIndex: 2
 --- !u!1 &578101914
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -656,7 +695,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -683,8 +724,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -737,6 +778,8 @@ GameObject:
   m_Component:
   - component: {fileID: 804620291}
   - component: {fileID: 804620292}
+  - component: {fileID: 804620294}
+  - component: {fileID: 804620293}
   m_Layer: 5
   m_Name: FirstCard
   m_TagString: Untagged
@@ -780,7 +823,44 @@ MonoBehaviour:
   frontCard: {fileID: 578101914}
   backCard: {fileID: 1466740085}
   frontCardText: {fileID: 1759807029}
-  flipDuration: 0.5
+  flipDuration: 0.2
+  isFlipped: 0
+  isFlipping: 0
+  isSelected: 0
+--- !u!65 &804620293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804620290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 400, y: 695, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &804620294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804620290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc59bbcce59fbc4280451eedf1c75d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardIndex: 1
 --- !u!1 &847717303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

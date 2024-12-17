@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CardTouchHandler : MonoBehaviour {
     private CardFlip cardFlip;
+    public int cardIndex;
 
     private void Awake() {
         cardFlip = GetComponent<CardFlip>();
@@ -26,7 +27,7 @@ public class CardTouchHandler : MonoBehaviour {
 
     private void OnCardTouched() {
         if (cardFlip != null) {
-            GameStateManager.Instance.OnCardSelected(cardFlip);
+            GameStateManager.Instance.OnCardSelected(cardFlip, cardIndex);
         }
     }
 }

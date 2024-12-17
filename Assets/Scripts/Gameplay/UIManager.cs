@@ -1,17 +1,17 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
-
+    public Image background;
     public GameObject tableContainer;
     public TextMeshProUGUI descriptionText;
     public GameObject firstCard;
     public GameObject secondCard;
     public CardFlip firstCardFlip;
     public CardFlip secondCardFlip;
-
     public ScrollText scrollText;
 
     private void Awake() {
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour {
         GameplayAnchorManager.Instance.ShowContainer(true);
         GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Middle, 0.5f, () => {
             StartWritingText(dialogue.descriptionText);
-            PrepareCards(dialogue.firstCardText, dialogue.secondCardText);
+            PrepareCards(dialogue.firstCardText, dialogue.firstCardImage, dialogue.secondCardText, dialogue.secondCardImage);
         });
     }
 
@@ -48,9 +48,35 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    private void PrepareCards(string firstCardText, string secondCardText) {
+    public void ChangeBackground(string backgroundName) {
+       if (string.IsNullOrEmpty(backgroundName)) {
+            Debug.LogError("Image name is null or empty!");
+            return;
+        }
+
+        string imagePathPrefix = "Images/Backgrounds/";
+        string fullPath = imagePathPrefix + backgroundName;
+
+        Sprite loadedSprite = Resources.Load<Sprite>(fullPath);
+
+        if (loadedSprite != null) {
+            background.sprite = loadedSprite;
+            Debug.Log($"Image '{backgroundName}' successfully loaded and applied.");
+        } else {
+            Debug.LogError($"Image '{backgroundName}' not found in Resources folder!");
+        }
+    }
+
+
+    public void ClearText() {
+        descriptionText.text = "";
+    }
+
+    private void PrepareCards(string firstCardText, string firstCardImage, string secondCardText, string secondCardImage) {
         firstCardFlip.SetCardText(firstCardText);
+        firstCardFlip.SetCardImage(firstCardImage);
         secondCardFlip.SetCardText(secondCardText);
+        secondCardFlip.SetCardImage(secondCardImage);
     }
 
     public void FlipCards() {

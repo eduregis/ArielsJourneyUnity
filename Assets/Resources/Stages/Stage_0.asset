@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage_0
   m_EditorClassIdentifier: 
   stageId: 0
-  nextStageId: 0
+  nextStageId: 1
   dialogues:
   - dialogueId: 0
     descriptionText: testando card 1 testandod 1 testando card 1 testandod 1

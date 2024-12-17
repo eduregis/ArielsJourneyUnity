@@ -26,6 +26,7 @@ public class GameStateManager : MonoBehaviour {
             Debug.LogError($"Stage {stageId} not found in Resources!");
             return;
         }
+        UIManager.Instance.ChangeBackground(currentStage.backgroundName);
         LoadDialogue(0);
     }
 
@@ -43,7 +44,7 @@ public class GameStateManager : MonoBehaviour {
         UIManager.Instance.UpdateUI(currentDialogue);
     }
 
-    public void OnCardSelected(CardFlip selectedCard) {
+    public void OnCardSelected(CardFlip selectedCard, int cardIndex) {
         if (selectedCard == null || selectedCard.isFlipping) {
             Debug.LogWarning("Card is already flipping or null!");
             return;
@@ -52,26 +53,39 @@ public class GameStateManager : MonoBehaviour {
         // Anima a seleção da carta
         selectedCard.AnimateSelection(0.5f, () => {
             Debug.Log($"Card selected: {selectedCard.frontCardText.text}");
-            // Processar a escolha da carta aqui
-            ProcessCardChoice(selectedCard);
+            switch (cardIndex) {
+                case 1:
+                    OnChoiceSelected(currentDialogue.nextFirstDialogueId);
+                    break;
+                case 2:
+                    OnChoiceSelected(currentDialogue.nextSecondDialogueId);
+                    break;
+                default:
+                    break;
+            }
         });
     }
 
-    private void ProcessCardChoice(CardFlip selectedCard) {
-        Debug.Log($"Processing choice for card: {selectedCard.frontCardText.text}");
-        // Avançar diálogo, carregar nova cena ou processar lógica do jogo
+    private void OnChoiceSelected(int nextDialogueId) {
+        GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Bottom, 0.5f, () => {
+            GameplayAnchorManager.Instance.ShowContainer(false);
+            UIManager.Instance.FlipCards();
+            UIManager.Instance.ClearText();
+            GoToNextDialogue(nextDialogueId);
+        });
     }
 
-
-    private void OnChoiceSelected(int nextDialogueId) {
-        if (nextDialogueId == -1) { // Supondo que -1 significa fim do Stage
-            if (currentStage.nextStageId != -1) {
-                LoadStage(currentStage.nextStageId);
+    private void GoToNextDialogue(int nextDialogueId) {
+        GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Top, 0.5f, () => {
+            if (nextDialogueId == -1) { // Supondo que -1 significa fim do Stage
+                if (currentStage.nextStageId != -1) {
+                    LoadStage(currentStage.nextStageId);
+                } else {
+                    Debug.Log("Game completed!");
+                }
             } else {
-                Debug.Log("Game completed!");
+                LoadDialogue(nextDialogueId);
             }
-        } else {
-            LoadDialogue(nextDialogueId);
-        }
+        });
     }
 }
