@@ -19,7 +19,8 @@ MonoBehaviour:
     descriptionText: novo stage novo stagenovo stagenovo stage
     firstCardText: card1
     secondCardText: card2
-    firstCardImage: {fileID: 0}
-    secondCardImage: {fileID: 0}
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
     nextFirstDialogueId: 1
     nextSecondDialogueId: 2
+  backgroundName: Ariel_gameplay_bkg_002

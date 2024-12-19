@@ -19,23 +19,24 @@ MonoBehaviour:
     descriptionText: testando card 1 testandod 1 testando card 1 testandod 1
     firstCardText: card1
     secondCardText: card2
-    firstCardImage: {fileID: 0}
-    secondCardImage: {fileID: 0}
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
     nextFirstDialogueId: 1
     nextSecondDialogueId: 2
   - dialogueId: 1
     descriptionText: ' testando card 2'
     firstCardText: card3
     secondCardText: card4
-    firstCardImage: {fileID: 0}
-    secondCardImage: {fileID: 0}
-    nextFirstDialogueId: 0
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: -1
     nextSecondDialogueId: 0
   - dialogueId: 2
     descriptionText: ' testando card 3'
     firstCardText: card5
     secondCardText: card6
-    firstCardImage: {fileID: 0}
-    secondCardImage: {fileID: 0}
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
     nextFirstDialogueId: 0
     nextSecondDialogueId: 0
+  backgroundName: Ariel_gameplay_bkg_001
