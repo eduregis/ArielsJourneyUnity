@@ -11,4 +11,5 @@ public class Dialogue {
     public string secondCardImage;
     public int nextFirstDialogueId; // -1 para indicar fim do Stage
     public int nextSecondDialogueId; // -1 para indicar fim do Stage
+    public string[] triggers;
 }

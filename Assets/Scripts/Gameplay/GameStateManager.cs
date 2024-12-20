@@ -1,11 +1,15 @@
 // GameStateManager.cs
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameStateManager : MonoBehaviour {
     public static GameStateManager Instance;
-
     private StageData currentStage;
     private Dialogue currentDialogue;
+
+
+    private const string HerosJourneyKey = "HerosJourney";
+    private const string ArchetypesKey = "Archetypes";
 
     private void Awake() {
         if (Instance == null) {
@@ -15,9 +19,14 @@ public class GameStateManager : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        GameDataManager.Initialize();
+    }
+
     // Inicia o game com Stage 0 
     public void StartGame() {
-        LoadStage(0);
+        int stage = GameDataManager.GetStage();
+        LoadStage(stage);
     }
 
     private void LoadStage(int stageId) {
@@ -27,7 +36,8 @@ public class GameStateManager : MonoBehaviour {
             return;
         }
         UIManager.Instance.ChangeBackground(currentStage.backgroundName);
-        LoadDialogue(0);
+        int dialogue = GameDataManager.GetDialogue();
+        LoadDialogue(dialogue);
     }
 
     private void LoadDialogue(int dialogueId) {
@@ -38,10 +48,29 @@ public class GameStateManager : MonoBehaviour {
         }
         Debug.Log($"Loaded dialogue: {currentDialogue.firstCardText}, {currentDialogue.secondCardText}");
         UpdateUI();
+        GetTriggers();
     }
 
     private void UpdateUI() {
         UIManager.Instance.UpdateUI(currentDialogue);
+    }
+
+    private void GetTriggers() {
+        foreach (string trigger in currentDialogue.triggers) {
+            if (trigger.StartsWith("HJ_")) {
+                ProcessHerosJourney(trigger);
+            } else if (trigger.StartsWith("AT_")) {
+                ProcessArchetype(trigger);
+            }
+        };
+    }
+
+    private void ProcessHerosJourney(string flag) {
+        GameDataManager.ProcessHerosJourney(flag);
+    }
+
+    private void ProcessArchetype(string flag) {
+        GameDataManager.AddArchetype(flag);
     }
 
     public void OnCardSelected(CardFlip selectedCard, int cardIndex) {
@@ -83,11 +112,14 @@ public class GameStateManager : MonoBehaviour {
         GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Top, 0.5f, () => {
             if (nextDialogueId == -1) { // Supondo que -1 significa fim do Stage
                 if (currentStage.nextStageId != -1) {
+                    GameDataManager.SetStage(currentStage.nextStageId);
+                    GameDataManager.SetDialogue(0);
                     LoadStage(currentStage.nextStageId);
                 } else {
                     Debug.Log("Game completed!");
                 }
             } else {
+                GameDataManager.SetDialogue(nextDialogueId);
                 LoadDialogue(nextDialogueId);
             }
         });
