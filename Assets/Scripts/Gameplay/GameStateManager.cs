@@ -52,7 +52,7 @@ public class GameStateManager : MonoBehaviour {
 
         // Anima a seleção da carta
         selectedCard.AnimateSelection(0.5f, () => {
-            Debug.Log($"Card selected: {selectedCard.frontCardText.text}");
+            Debug.Log($"Card selected: {cardIndex}");
             switch (cardIndex) {
                 case 1:
                     OnChoiceSelected(currentDialogue.nextFirstDialogueId);
@@ -64,6 +64,10 @@ public class GameStateManager : MonoBehaviour {
                     break;
             }
         });
+    }
+
+    public void OnLetterTapped() {
+        OnChoiceSelected(currentDialogue.nextFirstDialogueId);
     }
 
     private void OnChoiceSelected(int nextDialogueId) {

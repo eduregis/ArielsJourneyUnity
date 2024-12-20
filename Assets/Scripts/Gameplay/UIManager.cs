@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
+    [SerializeField]
     public GameObject tableContainer;
     public TextMeshProUGUI descriptionText;
     public GameObject firstCard;
@@ -12,6 +13,8 @@ public class UIManager : MonoBehaviour {
     public CardFlip firstCardFlip;
     public CardFlip secondCardFlip;
     public ScrollText scrollText;
+
+    private bool hasntNullValues;
 
     private void Awake() {
         QualitySettings.vSyncCount = 0;
@@ -34,9 +37,18 @@ public class UIManager : MonoBehaviour {
 
     public void UpdateUI(Dialogue dialogue) {
         GameplayAnchorManager.Instance.ShowContainer(true);
+        hasntNullValues = 
+            dialogue.firstCardText != "" &&  dialogue.firstCardImage != "" && 
+            dialogue.secondCardText != "" &&  dialogue.secondCardImage != "";
+        Debug.Log("All values: " +  dialogue.firstCardText + ", " + dialogue.firstCardImage + ", " + dialogue.secondCardText + ", " + dialogue.secondCardImage);
+        firstCard.SetActive(hasntNullValues);
+        secondCard.SetActive(hasntNullValues);
+
         GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Middle, 0.5f, () => {
             StartWritingText(dialogue.descriptionText);
-            PrepareCards(dialogue.firstCardText, dialogue.firstCardImage, dialogue.secondCardText, dialogue.secondCardImage);
+            if (hasntNullValues) {
+                PrepareCards(dialogue.firstCardText, dialogue.firstCardImage, dialogue.secondCardText, dialogue.secondCardImage);
+            };
         });
     }
 
@@ -67,6 +79,12 @@ public class UIManager : MonoBehaviour {
     public void FlipCards() {
         firstCardFlip.FlipCard();
         secondCardFlip.FlipCard();
+    }
+
+    public void TapCompleteText() {
+        if (!hasntNullValues) {
+            GameStateManager.Instance.OnLetterTapped();
+        }
     }
 
     public void SetButtonListeners(UnityEngine.Events.UnityAction firstAction, UnityEngine.Events.UnityAction secondAction) {

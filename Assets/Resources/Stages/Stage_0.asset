@@ -32,11 +32,12 @@ MonoBehaviour:
     nextFirstDialogueId: -1
     nextSecondDialogueId: 0
   - dialogueId: 2
-    descriptionText: ' testando card 3'
-    firstCardText: card5
-    secondCardText: card6
-    firstCardImage: Ariel_card_001
-    secondCardImage: Ariel_card_002
+    descriptionText: ' testando card 3 testando card 3 testando card 3 testando card
+      3 testando card 3'
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
     nextFirstDialogueId: 0
     nextSecondDialogueId: 0
   backgroundName: Ariel_gameplay_bkg_001

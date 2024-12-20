@@ -62,11 +62,17 @@ public class ScrollText : MonoBehaviour {
             isTyping = false;
             typingCoroutine = null;
             OnTypingComplete();
+        } else {
+            TapCompleteText();
         }
     }
 
     private void OnTypingComplete() {
         uiManager.FlipCards();
+    }
+
+    private void TapCompleteText() {
+        uiManager.TapCompleteText();
     }
 
     public void OnPointerClick() {
