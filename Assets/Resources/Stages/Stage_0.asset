@@ -24,7 +24,7 @@ MonoBehaviour:
     nextFirstDialogueId: 1
     nextSecondDialogueId: 2
   - dialogueId: 1
-    descriptionText: ' testando card 2'
+    descriptionText: ' testando <orange>card</orange> 2'
     firstCardText: card3
     secondCardText: card4
     firstCardImage: Ariel_card_002

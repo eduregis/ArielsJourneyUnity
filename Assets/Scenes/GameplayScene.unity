@@ -1586,6 +1586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3812754543654394277, guid: caf29f6976043be4c96047e0f2a898b8, type: 3}
+      propertyPath: cardIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7535676851030408567, guid: caf29f6976043be4c96047e0f2a898b8, type: 3}
       propertyPath: m_Name
       value: SecondGameplayCard
