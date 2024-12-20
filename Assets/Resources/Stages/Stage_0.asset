@@ -16,28 +16,130 @@ MonoBehaviour:
   nextStageId: 1
   dialogues:
   - dialogueId: 0
-    descriptionText: testando card 1 testandod 1 testando card 1 testandod 1
-    firstCardText: card1
-    secondCardText: card2
+    descriptionText: "A noite envolvia a pequena vila de <green>Ordon</green> em
+      um manto de sil\xEAncio, quebrado apenas pelo suave sussurro do vento nas \xE1rvores.
+      No interior de uma modesta cabana, Ariel dormia profundamente, quando uma voz
+      familiar a despertou.\n\n\u201CAriel\u2026\u201D"
+    firstCardText: Dormir um pouco mais
+    secondCardText: Abrir os olhos
     firstCardImage: Ariel_card_001
     secondCardImage: Ariel_card_002
     nextFirstDialogueId: 1
     nextSecondDialogueId: 2
   - dialogueId: 1
-    descriptionText: ' testando <orange>card</orange> 2'
-    firstCardText: card3
-    secondCardText: card4
+    descriptionText: "\u201CVamos, dorminhoca\u2026 O caf\xE9 est\xE1 quase pronto!\u201D"
+    firstCardText: Abrir os olhos
+    secondCardText: Abrir os olhos
     firstCardImage: Ariel_card_002
     secondCardImage: Ariel_card_001
-    nextFirstDialogueId: -1
-    nextSecondDialogueId: 0
+    nextFirstDialogueId: 2
+    nextSecondDialogueId: 2
   - dialogueId: 2
-    descriptionText: ' testando card 3 testando card 3 testando card 3 testando card
-      3 testando card 3'
+    descriptionText: "Ao abrir os olhos, Ariel viu seu irm\xE3o, Henry, encostado
+      na porta, com seu avental sujo e um sorriso no rosto. Ele j\xE1 estava trabalhando
+      na forja enquanto ela sonhava. \u201CBom dia! Perdeu a hora de novo?\u201D\\n\\nAriel
+      respondeu, ainda tentando afastar o sono:"
+    firstCardText: "\u201CBom dia, eu tive um sonho estranho\u2026\u201D"
+    secondCardText: Revirando os olhos
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 3
+  - dialogueId: 3
+    descriptionText: "\u201CBom, te vejo na mesa!\u201D Henry sorriu e saiu do quarto.
+      Ele era o tipo de irm\xE3o que sempre se preocupava, e isso a fazia sentir-se
+      sortuda.\\n\\nAriel se levantou, preparando-se para o dia, enquanto Henry organizava
+      a mesa com p\xE3es e frutas frescas. Assim que estava vestida e desperta, ela
+      se dirigiu \xE0 mesa."
+    firstCardText: "Ir tomar caf\xE9 com Henry"
+    secondCardText: Tentar sair escondida
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 4
+    nextSecondDialogueId: 4
+  - dialogueId: 4
+    descriptionText: "Quando Ariel saiu do quarto, Henry, j\xE1 sentado \xE0 mesa,
+      fez um pedido:\\n\\n\u201CAh! Depois do seu treino, voc\xEA poderia avisar
+      o Felipe que ele pode vir buscar a espada no fim da tarde?\u201D\\n\\nHenry
+      pediu, cortando uma fatia de p\xE3o."
+    firstCardText: "\u201CFelipe?\u201D"
+    secondCardText: "\u201COnde ele vai estar?\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 6
+  - dialogueId: 5
+    descriptionText: "\u201C\xC9, o Felipe. Esqueceu? Tio Felipe? Ele entrou pra
+      guarda depois que\u2026\u201D"
+    firstCardText: "\u201C\u2026 a guerra come\xE7ou.\u201D"
+    secondCardText: "\u201C\u2026 depois do \xFAltimo ataque.\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 6
+    nextSecondDialogueId: 6
+  - dialogueId: 6
+    descriptionText: "Henry suspirou, a tristeza momentaneamente ofuscando seu sorriso.
+      \u201CEle deve estar de vigia na Torre Sul hoje! Se puder avis\xE1-lo\u2026\u201D"
+    firstCardText: "\u201CPode deixar!\u201D"
+    secondCardText: "\u201CCerto.\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 7
+    nextSecondDialogueId: 7
+  - dialogueId: 7
+    descriptionText: "\u201CObrigado, maninha. Ah, seu caf\xE9 est\xE1 pronto!\u201D\\n\\nAriel
+      pegou sua caneca favorita, o calor do caf\xE9 se espalhando por suas m\xE3os."
+    firstCardText: "\u201CEstou com pressa.\u201D"
+    secondCardText: "\u201CEnt\xE3o vamos comer!\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 8
+    nextSecondDialogueId: 9
+  - dialogueId: 8
+    descriptionText: "\u201CEstou com pressa,\u201D ela disse, apressando-se a tomar
+      um gole.\\n\u201CAh\u2026\u201D Henry olhou para ela com uma leve frustra\xE7\xE3o,
+      mas logo se recomp\xF4s. \u201CPelo menos leve um p\xE3o, n\xE3o se pode treinar
+      de est\xF4mago vazio!\u201D\\n\\n\u201CPor que voc\xEA se preocupa tanto? Eu
+      consigo me cuidar,\u201D Ariel respondeu, a determina\xE7\xE3o em sua voz misturando-se
+      com a gratid\xE3o.\\n\\n\u201CEu sei que voc\xEA consegue, mas\u2026 a guerra
+      est\xE1 l\xE1 fora. Precisamos cuidar um do outro, Ariel.\u201D Ele hesitou,
+      olhando para a janela onde o c\xE9u come\xE7ava a clarear. \u201CMuitos dos
+      nossos amigos e vizinhos foram. Voc\xEA sabe que n\xE3o podemos nos dar ao
+      luxo de perder mais ningu\xE9m.\u201D"
+    firstCardText: "\u201CVoc\xEA est\xE1 certo, eu vou me cuidar.\u201D"
+    secondCardText: "\u201C\xC9 s\xF3 um treino, n\xE3o vou me arriscar.\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 9
+    nextSecondDialogueId: 9
+  - dialogueId: 9
+    descriptionText: "Assim que terminavam o caf\xE9, ela percebeu que realmente
+      precisava ir.\\n\\nIndo para a porta, Ariel pegou seu escudo e sua espada de
+      madeira. Enquanto cal\xE7ava suas botas, Henry se aproximou, apoiando-se na
+      parede.\\n\\n\"Ei\u2026 Eu sei que voc\xEA j\xE1 \xE9 grandinha, mas por favor,
+      se cuide.\""
+    firstCardText: '"Pode deixar!'
+    secondCardText: "\"N\xE3o me trate como crian\xE7a.\""
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+  - dialogueId: 10
+    descriptionText: "Henry assentiu, um sorriso aliviado surgindo em seu rosto.
+      \u201CEu s\xF3 quero que voc\xEA volte para casa, e que eu possa te ouvir reclamar
+      das aulas de combate.\u201D\\n\\nOs irm\xE3os se alimentaram enquanto conversavam
+      sobre os mais diversos assuntos, desde as novas armas que Henry estava forjando
+      at\xE9 os rumores da guerra que chegavam at\xE9 a vila.\\n\\n\u201CVoc\xEA
+      viu os novos recrutas? Parecem t\xE3o inexperientes\u2026\u201D Ariel comentou,
+      um fio de preocupa\xE7\xE3o em sua voz.\\n\\n\u201CEles est\xE3o tentando.
+      Cada um deles \xE9 como voc\xEA, tentando fazer a diferen\xE7a,\u201D Henry
+      respondeu, sua voz encorajadora. \u201CMas voc\xEA precisa se lembrar que tamb\xE9m
+      \xE9 importante cuidar de si mesma. A guerra n\xE3o \xE9 um jogo.\u201D\\n\\nAriel
+      assentiu, sabendo que ele estava certo."
     firstCardText: 
     secondCardText: 
     firstCardImage: 
     secondCardImage: 
-    nextFirstDialogueId: 0
-    nextSecondDialogueId: 0
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
   backgroundName: Ariel_gameplay_bkg_001

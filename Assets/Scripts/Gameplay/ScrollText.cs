@@ -15,7 +15,8 @@ public class ScrollText : MonoBehaviour {
     private Dictionary<string, string> customTags = new Dictionary<string, string> {
         { "orange", "#FFA500" },
         { "red", "#FF0000" },
-        { "blue", "#0000FF" }
+        { "blue", "#0000FF" },
+        { "green", "#006405" }
     };
 
     private void Awake() {
@@ -49,29 +50,39 @@ public class ScrollText : MonoBehaviour {
     }
 
     private IEnumerator TypeRoutine(string text) {
-        textDisplay.text = "";
-        int charIndex = 0;
-        bool insideTag = false;
+    textDisplay.text = "";
+    int charIndex = 0;
+    bool insideTag = false;
+    float lastSoundTime = 0f;  // Para controlar o intervalo entre os sons
 
-        while (charIndex < text.Length) {
-            // Detectar início e fim de tags
-            if (text[charIndex] == '<') insideTag = true;
-            if (text[charIndex] == '>') insideTag = false;
+    while (charIndex < text.Length) {
+        // Detectar início e fim de tags
+        if (text[charIndex] == '<') insideTag = true;
+        if (text[charIndex] == '>') insideTag = false;
 
-            // Apenas exibir o texto visível, incluindo tags completas
-            textDisplay.text += text[charIndex];
-            charIndex++;
+        // Apenas exibir o texto visível, incluindo tags completas
+        textDisplay.text += text[charIndex];
+        charIndex++;
 
-            // Pular atraso enquanto dentro de uma tag
-            if (!insideTag) {
-                yield return new WaitForSeconds(typingSpeed);
-            }
+        if (text[charIndex - 1] == '\n') {
+            yield return new WaitForSeconds(0.25f);
+            AudioManager.Instance.PlayOneShot("Katching");
+            yield return new WaitForSeconds(0.25f);
         }
 
-        isTyping = false;
-        typingCoroutine = null;
-        OnTypingComplete();
+        if (!insideTag) {
+            if (Time.time - lastSoundTime >= typingSpeed) {
+                AudioManager.Instance.PlayRandomTypingSound();
+                lastSoundTime = Time.time;
+            }
+            yield return new WaitForSeconds(typingSpeed);  // Aguarda o tempo de digitação para o próximo caractere
+        }
     }
+
+    isTyping = false;
+    typingCoroutine = null;
+    OnTypingComplete();
+}
 
     public void CompleteTyping() {
         if (isTyping) {
@@ -90,6 +101,7 @@ public class ScrollText : MonoBehaviour {
     }
 
     private void TapCompleteText() {
+        AudioManager.Instance.PlayOneShot("Katching");
         uiManager.TapCompleteText();
     }
 

@@ -441,6 +441,71 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 695, y: 800, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &635516199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635516200}
+  - component: {fileID: 635516201}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &635516200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635516199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1566697402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635516201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635516199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a36642fee57a7840ba55ddc0af23b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Type_0
+    clip: {fileID: 8300000, guid: bda92b568849e71419d57ab593a7fba1, type: 3}
+    volume: 0.3
+    loop: 0
+  - name: Type_1
+    clip: {fileID: 8300000, guid: 6c28d46b1b6b6254ebad81ff2023be91, type: 3}
+    volume: 0.3
+    loop: 0
+  - name: Type_2
+    clip: {fileID: 8300000, guid: b75b7fe5e4f71f24ab6cc89691034d98, type: 3}
+    volume: 0.3
+    loop: 0
+  - name: Type_3
+    clip: {fileID: 8300000, guid: 6a69aa1ff1bd0f245a5e6d947c35e88a, type: 3}
+    volume: 0.3
+    loop: 0
+  - name: Katching
+    clip: {fileID: 8300000, guid: a72afce9666ec254d922d737b0ab5f0b, type: 3}
+    volume: 0.3
+    loop: 0
 --- !u!1 &648890758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1105,7 @@ Transform:
   - {fileID: 113268980}
   - {fileID: 2077097213}
   - {fileID: 1237176111}
+  - {fileID: 635516200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581306611
