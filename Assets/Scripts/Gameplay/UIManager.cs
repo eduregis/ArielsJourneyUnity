@@ -87,7 +87,14 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void SetButtonListeners(UnityEngine.Events.UnityAction firstAction, UnityEngine.Events.UnityAction secondAction) {
-        // Defina os listeners dos botões de escolha
+    // Button Actions
+    public void OnConfigButtonPressed() {
+        // Sua ação para o ConfigButton
+        Debug.Log("Config Button Pressed");
+    }
+
+    public void OnBackButtonPressed() {
+        // Sua ação para o BackButton
+        Debug.Log("Back Button Pressed");
     }
 }
