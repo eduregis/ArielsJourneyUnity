@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
-    [SerializeField]
+
+    [Header("References")]
+    public ConfigSheetController configSheetController;
     public GameObject tableContainer;
     public TextMeshProUGUI descriptionText;
     public GameObject firstCard;
@@ -89,7 +91,11 @@ public class UIManager : MonoBehaviour {
 
     // Button Actions
     public void OnConfigButtonPressed() {
-        // Sua ação para o ConfigButton
+        if (configSheetController != null) {
+            configSheetController.ShowSheet();
+        } else {
+            Debug.LogError("ConfigSheetController não foi atribuído ao UIManager!");
+        }
         Debug.Log("Config Button Pressed");
     }
 
