@@ -24,20 +24,6 @@ public class ScrollText : MonoBehaviour {
             textDisplay.raycastTarget = true;
         }
     }
-
-    private void Update() {
-        if (Input.touchCount > 0) {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began) {
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                if (Physics.Raycast(ray, out RaycastHit hit)) {
-                    if (hit.transform == transform) {
-                        OnPointerClick();
-                    }
-                }
-            }
-        }
-    }
     
     public void TypeText(string text) {
         // Processar as tags personalizadas antes de começar a digitação
