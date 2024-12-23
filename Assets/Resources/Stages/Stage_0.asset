@@ -28,6 +28,7 @@ MonoBehaviour:
     nextSecondDialogueId: 2
     triggers:
     - HJ_01
+    sound: 
   - dialogueId: 1
     descriptionText: "\u201CVamos, dorminhoca\u2026 O caf\xE9 est\xE1 quase pronto!\u201D"
     firstCardText: Abrir os olhos
@@ -39,6 +40,7 @@ MonoBehaviour:
     triggers:
     - HJ_02
     - AT_Hero
+    sound: Effect_Yawn
   - dialogueId: 2
     descriptionText: "Ao abrir os olhos, Ariel viu seu irm\xE3o, Henry, encostado
       na porta, com seu avental sujo e um sorriso no rosto. Ele j\xE1 estava trabalhando
@@ -51,6 +53,7 @@ MonoBehaviour:
     nextFirstDialogueId: 3
     nextSecondDialogueId: 3
     triggers: []
+    sound: 
   - dialogueId: 3
     descriptionText: "\u201CBom, te vejo na mesa!\u201D Henry sorriu e saiu do quarto.
       Ele era o tipo de irm\xE3o que sempre se preocupava, e isso a fazia sentir-se
@@ -64,6 +67,7 @@ MonoBehaviour:
     nextFirstDialogueId: 4
     nextSecondDialogueId: 4
     triggers: []
+    sound: 
   - dialogueId: 4
     descriptionText: "Quando Ariel saiu do quarto, Henry, j\xE1 sentado \xE0 mesa,
       fez um pedido:\n\n\u201CAh! Depois do seu treino, voc\xEA poderia avisar o
@@ -76,6 +80,7 @@ MonoBehaviour:
     nextFirstDialogueId: 5
     nextSecondDialogueId: 6
     triggers: []
+    sound: 
   - dialogueId: 5
     descriptionText: "\u201C\xC9, o Felipe. Esqueceu? Tio Felipe? Ele entrou pra
       guarda depois que\u2026\u201D"
@@ -86,6 +91,7 @@ MonoBehaviour:
     nextFirstDialogueId: 6
     nextSecondDialogueId: 6
     triggers: []
+    sound: 
   - dialogueId: 6
     descriptionText: "Henry suspirou, a tristeza momentaneamente ofuscando seu sorriso.
       \u201CEle deve estar de vigia na Torre Sul hoje! Se puder avis\xE1-lo\u2026\u201D"
@@ -96,6 +102,7 @@ MonoBehaviour:
     nextFirstDialogueId: 7
     nextSecondDialogueId: 7
     triggers: []
+    sound: 
   - dialogueId: 7
     descriptionText: "\u201CObrigado, maninha. Ah, seu caf\xE9 est\xE1 pronto!\u201D\n\nAriel
       pegou sua caneca favorita, o calor do caf\xE9 se espalhando por suas m\xE3os."
@@ -106,6 +113,7 @@ MonoBehaviour:
     nextFirstDialogueId: 8
     nextSecondDialogueId: 9
     triggers: []
+    sound: 
   - dialogueId: 8
     descriptionText: "\u201CEstou com pressa,\u201D ela disse, apressando-se a tomar
       um gole.\n\u201CAh\u2026\u201D Henry olhou para ela com uma leve frustra\xE7\xE3o,
@@ -124,6 +132,7 @@ MonoBehaviour:
     nextFirstDialogueId: 9
     nextSecondDialogueId: 9
     triggers: []
+    sound: 
   - dialogueId: 9
     descriptionText: "Assim que terminavam o caf\xE9, ela percebeu que realmente
       precisava ir.\n\nIndo para a porta, Ariel pegou seu escudo e sua espada de
@@ -137,6 +146,7 @@ MonoBehaviour:
     nextFirstDialogueId: 10
     nextSecondDialogueId: 10
     triggers: []
+    sound: 
   - dialogueId: 10
     descriptionText: "Henry assentiu, um sorriso aliviado surgindo em seu rosto.
       \u201CEu s\xF3 quero que voc\xEA volte para casa, e que eu possa te ouvir reclamar
@@ -156,4 +166,6 @@ MonoBehaviour:
     nextFirstDialogueId: -1
     nextSecondDialogueId: -1
     triggers: []
+    sound: 
   backgroundName: Ariel_gameplay_bkg_001
+  sound: Music_Song_of_the_Ancients_Devola

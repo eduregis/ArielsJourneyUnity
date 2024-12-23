@@ -20,8 +20,6 @@ public class ConfigSheetController : MonoBehaviour {
         // Obter o Animator do ConfigSheet
         if (sheet != null) {
             animator = configSheetContainer.GetComponent<Animator>();
-        } else {
-            Debug.LogError("O GameObject 'sheet' não foi atribuído no Inspector!");
         }
     }
 
@@ -32,17 +30,12 @@ public class ConfigSheetController : MonoBehaviour {
 
         if (animator != null) {
             animator.SetTrigger(ShowTrigger); // Disparar animação de entrada
-        } else {
-            Debug.LogError("Animator não está configurado no 'sheet'!");
         }
     }
 
     public void HideSheet() {
-        Debug.Log("escondeu");
         if (animator != null) {
-            animator.SetTrigger(HideTrigger); // Disparar animação de saída
-        } else {
-            Debug.LogError("Animator não está configurado no 'sheet'!");
+            animator.SetTrigger(HideTrigger);
         }
 
         // Desativar o Canvas após um pequeno atraso para permitir a animação

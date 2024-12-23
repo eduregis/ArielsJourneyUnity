@@ -12,4 +12,5 @@ public class Dialogue {
     public int nextFirstDialogueId; // -1 para indicar fim do Stage
     public int nextSecondDialogueId; // -1 para indicar fim do Stage
     public string[] triggers;
+    public string sound;
 }

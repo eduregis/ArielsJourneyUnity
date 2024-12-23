@@ -25,21 +25,44 @@ public class AudioManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        InitializeVolumes();
+    }
+
+    private void InitializeVolumes() {
         soundSources = new Dictionary<string, AudioSource>();
+
+        soundSources = new Dictionary<string, AudioSource>();
+
+        // Obter volumes salvos
+        float ambienceVolume = PlayerPrefs.GetFloat(GameDataManager.AmbienceVolumeKey, 1.0f);
+        float musicVolume = PlayerPrefs.GetFloat(GameDataManager.MusicVolumeKey, 1.0f);
+        float effectVolume = PlayerPrefs.GetFloat(GameDataManager.EffectVolumeKey, 1.0f);
 
         foreach (Sound sound in sounds) {
             AudioSource source = gameObject.AddComponent<AudioSource>();
             source.clip = sound.clip;
-            source.volume = sound.volume;
+            source.volume = sound.volume; // Valor padrão no som
             source.loop = sound.loop;
+
+            // Ajustar volume com base nos valores salvos
+            if (sound.name.StartsWith("Ambience_", System.StringComparison.OrdinalIgnoreCase)) {
+                source.volume = ambienceVolume;
+            } else if (sound.name.StartsWith("Music_", System.StringComparison.OrdinalIgnoreCase)) {
+                source.volume = musicVolume;
+            } else if (sound.name.StartsWith("Effect_", System.StringComparison.OrdinalIgnoreCase)) {
+                source.volume = effectVolume;
+            }
+
             soundSources.Add(sound.name, source);
         }
     }
 
     public void SetVolume(string soundType, float volume) {
-         string adjustedSoundType = soundType.Replace("Volume", "").Trim();
+        Debug.Log($"Setting volume for {soundType} to {volume}");
+        string adjustedSoundType = soundType.Replace("Volume", "").Trim();
+
         foreach (var sound in sounds) {
-            if (sound.name.StartsWith(adjustedSoundType, System.StringComparison.OrdinalIgnoreCase)) {
+            if (sound.name.StartsWith($"{adjustedSoundType}_", System.StringComparison.OrdinalIgnoreCase)) {
                 if (soundSources.TryGetValue(sound.name, out var source)) {
                     source.volume = volume;
                 }
@@ -49,12 +72,14 @@ public class AudioManager : MonoBehaviour {
 
     // Método para tocar um som
     public void Play(string soundName) {
-        if (soundSources.ContainsKey(soundName)) {
+    if (soundSources.ContainsKey(soundName)) {
+        if (!soundSources[soundName].isPlaying) {
             soundSources[soundName].Play();
-        } else {
-            Debug.LogWarning($"Sound {soundName} not found!");
         }
+    } else {
+        Debug.LogWarning($"Sound {soundName} not found!");
     }
+}
 
     // Método para tocar um som de forma única (sem interferir nos sons em execução)
     public void PlayOneShot(string soundName) {

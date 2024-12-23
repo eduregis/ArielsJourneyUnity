@@ -36,6 +36,10 @@ public class GameStateManager : MonoBehaviour {
             return;
         }
         UIManager.Instance.ChangeBackground(currentStage.backgroundName);
+        Debug.Log(currentStage.sound);
+        if (currentStage.sound != "") {
+            AudioManager.Instance.Play(currentStage.sound);
+        }
         int dialogue = GameDataManager.GetDialogue();
         LoadDialogue(dialogue);
     }
@@ -46,7 +50,9 @@ public class GameStateManager : MonoBehaviour {
             Debug.LogError($"Dialogue {dialogueId} not found in Stage {currentStage.stageId}!");
             return;
         }
-        Debug.Log($"Loaded dialogue: {currentDialogue.firstCardText}, {currentDialogue.secondCardText}");
+        if (currentDialogue.sound != "") {
+            AudioManager.Instance.PlayOneShot(currentDialogue.sound);
+        }
         UpdateUI();
         GetTriggers();
     }
@@ -80,6 +86,7 @@ public class GameStateManager : MonoBehaviour {
         }
 
         // Anima a seleção da carta
+        AudioManager.Instance.PlayOneShot("Effect_Card_Side_Choosen");
         selectedCard.AnimateSelection(0.5f, () => {
             Debug.Log($"Card selected: {cardIndex}");
             switch (cardIndex) {
