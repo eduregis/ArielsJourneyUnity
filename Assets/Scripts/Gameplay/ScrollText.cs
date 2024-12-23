@@ -24,7 +24,7 @@ public class ScrollText : MonoBehaviour {
             textDisplay.raycastTarget = true;
         }
     }
-    
+
     public void TypeText(string text) {
         // Processar as tags personalizadas antes de começar a digitação
         fullText = ReplaceCustomTags(text);
@@ -52,7 +52,7 @@ public class ScrollText : MonoBehaviour {
 
         if (text[charIndex - 1] == '\n') {
             yield return new WaitForSeconds(0.25f);
-            AudioManager.Instance.PlayOneShot("Katching");
+            AudioManager.Instance.PlayOneShot("Effect_Katching");
             yield return new WaitForSeconds(0.25f);
         }
 

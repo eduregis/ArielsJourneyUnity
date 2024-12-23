@@ -347,9 +347,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3812754543654394277}
-        m_TargetAssemblyTypeName: CardTouchHandler, Assembly-CSharp
-        m_MethodName: OnCardTouched
+      - m_Target: {fileID: 2718451185909585846}
+        m_TargetAssemblyTypeName: CardFlip, Assembly-CSharp
+        m_MethodName: OnCardSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -369,7 +369,6 @@ GameObject:
   m_Component:
   - component: {fileID: 35434302362937916}
   - component: {fileID: 2718451185909585846}
-  - component: {fileID: 3812754543654394277}
   m_Layer: 5
   m_Name: GameplayCard
   m_TagString: Untagged
@@ -419,19 +418,7 @@ MonoBehaviour:
   isFlipped: 0
   isFlipping: 0
   isSelected: 0
---- !u!114 &3812754543654394277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7535676851030408567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc59bbcce59fbc4280451eedf1c75d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardIndex: 1
+  cardIndex: 0
 --- !u!1 &9070769729365599051
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +486,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24606fe7131bb11428ceadbeb29e6ed6, type: 2}
+  m_sharedMaterial: {fileID: -8397121445706754805, guid: 24606fe7131bb11428ceadbeb29e6ed6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

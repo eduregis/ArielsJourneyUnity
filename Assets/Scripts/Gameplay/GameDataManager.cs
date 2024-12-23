@@ -3,6 +3,9 @@ using UnityEngine;
 
 public static class GameDataManager {
     // Constantes para chaves
+    public const string AmbienceVolumeKey = "AmbienceVolume";
+    public const string MusicVolumeKey = "MusicVolume";
+    public const string EffectVolumeKey = "EffectVolume";
     public const string StageKey = "Stage";
     public const string DialogueKey = "Dialogue";
     public const string HerosJourneyKey = "HerosJourney";
@@ -10,6 +13,18 @@ public static class GameDataManager {
 
     // Inicializa as variáveis com valores padrão, se necessário
     public static void Initialize() {
+
+        if (!PlayerPrefs.HasKey(AmbienceVolumeKey)) {
+            PlayerPrefs.SetFloat(AmbienceVolumeKey, 1.0f);
+        }
+
+        if (!PlayerPrefs.HasKey(MusicVolumeKey)) {
+            PlayerPrefs.SetFloat(MusicVolumeKey, 1.0f);
+        }
+
+        if (!PlayerPrefs.HasKey(EffectVolumeKey)) {
+            PlayerPrefs.SetFloat(EffectVolumeKey, 1.0f);
+        }
 
         if (!PlayerPrefs.HasKey(StageKey)) {
             PlayerPrefs.SetInt(StageKey, 0);
@@ -25,6 +40,35 @@ public static class GameDataManager {
 
         if (!PlayerPrefs.HasKey(ArchetypesKey)) {
             PlayerPrefs.SetString(ArchetypesKey, "");
+        }
+
+        PlayerPrefs.Save();
+    }
+    // Métodos para Gerenciar Stage
+
+    public static float GetVolume(string type) {
+        switch (type) {
+            case AmbienceVolumeKey:
+               return PlayerPrefs.GetFloat(AmbienceVolumeKey, 1.0f);
+            case MusicVolumeKey:
+               return PlayerPrefs.GetFloat(MusicVolumeKey, 1.0f);
+            case EffectVolumeKey:
+                return PlayerPrefs.GetFloat(EffectVolumeKey, 1.0f);
+            default:
+                return 1.0f;
+        }
+    }
+    public static void SetVolume(string type, float value) {
+        switch (type) {
+            case AmbienceVolumeKey:
+                PlayerPrefs.SetFloat(AmbienceVolumeKey, value);
+                break;
+            case MusicVolumeKey:
+                PlayerPrefs.SetFloat(MusicVolumeKey, value);
+                break;
+            case EffectVolumeKey:
+                PlayerPrefs.SetFloat(EffectVolumeKey, value);
+                break;
         }
 
         PlayerPrefs.Save();

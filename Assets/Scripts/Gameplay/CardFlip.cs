@@ -11,8 +11,8 @@ public class CardFlip : MonoBehaviour {
     public float flipDuration = 0.5f;
     public  bool isFlipped = false;
     public bool isFlipping = false;
-
     public bool isSelected = false;
+    public int cardIndex = 0;    
 
     private void Update() {
         if (isFlipped) {
@@ -103,5 +103,9 @@ public class CardFlip : MonoBehaviour {
 
         // Callback
         onComplete?.Invoke();
+    }
+
+    public void OnCardSelected() {
+        GameStateManager.Instance.OnCardSelected(this, cardIndex);
     }
 }

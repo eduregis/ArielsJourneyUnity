@@ -36,6 +36,17 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
+    public void SetVolume(string soundType, float volume) {
+         string adjustedSoundType = soundType.Replace("Volume", "").Trim();
+        foreach (var sound in sounds) {
+            if (sound.name.StartsWith(adjustedSoundType, System.StringComparison.OrdinalIgnoreCase)) {
+                if (soundSources.TryGetValue(sound.name, out var source)) {
+                    source.volume = volume;
+                }
+            }
+        }
+    }
+
     // Método para tocar um som
     public void Play(string soundName) {
         if (soundSources.ContainsKey(soundName)) {
@@ -55,7 +66,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void PlayRandomTypingSound() {
-        string[] typingSounds = { "Type_0", "Type_1", "Type_2", "Type_3" };
+        string[] typingSounds = { "Effect_Type_0", "Effect_Type_1", "Effect_Type_2", "Effect_Type_3" };
         int randomIndex = Random.Range(0, typingSounds.Length);
         PlayOneShot(typingSounds[randomIndex]);
     }
