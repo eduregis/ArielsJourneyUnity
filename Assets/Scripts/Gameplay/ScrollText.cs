@@ -87,7 +87,7 @@ public class ScrollText : MonoBehaviour {
     }
 
     private void TapCompleteText() {
-        AudioManager.Instance.PlayOneShot("Katching");
+        AudioManager.Instance.PlayOneShot("Effect_Katching");
         uiManager.TapCompleteText();
     }
 
