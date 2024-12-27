@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_4
+  m_EditorClassIdentifier: 
+  stageId: 4
+  stageName: ORDINARYWORLD_POSTTRAINING
+  nextStageId: 5
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Ap\xF3s algumas horas de treino, o treinador se espregui\xE7a
+      e sorri. \u201CBom, por hoje \xE9 s\xF3. Voc\xEA est\xE1 melhorando bastante!
+      Daqui a pouco, voc\xEA vai superar a todos n\xF3s.\u201D Ele ri enquanto limpa
+      alguns escudos. \u201CAh, e diga para o seu irm\xE3o que j\xE1 est\xE1 na hora
+      de ele come\xE7ar a treinar.\u201D"
+    firstCardText: "\u201CVou dizer\u201D"
+    secondCardText: "\u201CEu vou defend\xEA-lo\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 0
+    nextSecondDialogueId: 0
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "Diga mesmo. Esses sequestros est\xE3o me deixando muito preocupado\u2026
+      V\xE1rias pessoas j\xE1 foram levadas, e ainda nem sabemos o motivo. Pobre
+      Jamie\u2026\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "'N\xE3o seja t\xE3o arrogante, Ariel. Esses sequestros est\xE3o
+      me deixando muito preocupado\u2026 V\xE1rias pessoas j\xE1 foram levadas, e
+      ainda nem sabemos o motivo. Pobre Jamie\u2026\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  - dialogueId: 3
+    descriptionText: 'O Treinador parece se perder em pensamentos, e continua esfregando
+      os escudos com um pano gasto. Ariel, pronta para sair com seu escudo e espada
+      de madeira, decide:'
+    firstCardText: Se despedir
+    secondCardText: "\u201CGuarda Felipe?\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 4
+    nextSecondDialogueId: 5
+    triggers: []
+    sound: 
+  - dialogueId: 4
+    descriptionText: "\u201CAh, at\xE9 amanh\xE3, Ariel! Treine em casa e, por favor,
+      tente chegar no hor\xE1rio na pr\xF3xima.\u201D Ele sorri fazendo o coment\xE1rio.
+      \u201CPrometo que vou tentar!\u201D Ariel sorri e se despede, e logo segue
+      seu caminho."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  - dialogueId: 5
+    descriptionText: "\u201CHm? Ah- sim, Felipe. Ele est\xE1 de guarda na *Torre
+      Sul* hoje. Aquele garoto precisa descansar\u2026\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  backgroundName: Ariel_gameplay_bkg_001
+  sound: 

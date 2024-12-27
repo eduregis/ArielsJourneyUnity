@@ -13,14 +13,98 @@ MonoBehaviour:
   m_Name: Stage_1
   m_EditorClassIdentifier: 
   stageId: 1
-  nextStageId: 0
+  stageName: ORDINARYWORLD_TOWN
+  nextStageId: 2
   dialogues:
   - dialogueId: 0
-    descriptionText: novo stage novo stagenovo stagenovo stage
-    firstCardText: card1
-    secondCardText: card2
+    descriptionText: "Depois de alguns minutos caminhando na estrada de barro, Ariel
+      chega ao centro da cidade.\n\nA vila de Ordon, outrora vibrante e cheia de
+      vida, agora carrega as cicatrizes da guerra. As casas simples, pequenas e uma
+      vez acolhedoras, est\xE3o marcadas por desespero e preocupa\xE7\xE3o. Os altos
+      muros, que antes simbolizavam prote\xE7\xE3o, agora parecem limitar a esperan\xE7a.
+      A vida continua, mas a alegria foi substitu\xEDda pela cautela. Os sorrisos
+      s\xE3o escassos, e as risadas infantis, que antes ecoavam pela vila, agora
+      s\xE3o um sussurro distante."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: 1
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "Respirando fundo, ela inicia sua caminhada at\xE9 o campo de
+      treinamento, passando por dentro da feira popular. A atmosfera \xE9 tensa,
+      e o murm\xFArio dos compradores se mistura com o lamento por aqueles que partiram
+      para a guerra. Em meio a esse cen\xE1rio, Ariel reconhece a Senhora Endicott,
+      que parece desesperadamente tentar chamar a aten\xE7\xE3o de qualquer um que
+      a pudesse ouvir. O olhar da mulher reflete a dor de uma m\xE3e preocupada.\n\nAriel
+      se aproxima, hesitante. N\xE3o se viam h\xE1 anos, e o tempo parecia ter mudado
+      mais a Senhora Endicott do que a pr\xF3pria vila."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 2
+    nextSecondDialogueId: 2
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "\u201CEi! Voc\xEA!!\u201D A Senhora se aproxima e agarra os
+      ombros de Ariel, seus olhos arregalados com uma mistura de esperan\xE7a e desespero.
+      \u201CVoc\xEA viu o meu filho? Por favor, diga que viu meu filho!\u201D"
+    firstCardText: "\u201COlha, eu n\xE3o tenho tempo para isso. Sinto muito.\u201D"
+    secondCardText: "\u201CSinto muito, Senhora Endicott. Como posso ajudar?\u201D"
     firstCardImage: Ariel_card_001
     secondCardImage: Ariel_card_002
-    nextFirstDialogueId: 1
-    nextSecondDialogueId: 2
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 4
+    triggers: []
+    sound: 
+  - dialogueId: 3
+    descriptionText: "A express\xE3o da Senhora Endicott se transforma em desapontamento.
+      \u201CVoc\xEA\u2026 \xE9 muito cruel.\u201D Ela se afasta, murmurando em desapontamento,
+      e Ariel se sente mal por suas palavras."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 5
+    triggers: []
+    sound: 
+  - dialogueId: 4
+    descriptionText: "A express\xE3o da Senhora Endicott suaviza, e seus olhos brilham
+      com gratid\xE3o. \u201CObrigada, querida! Meu filho, Jamie\u2026 Ele desapareceu
+      h\xE1 uma semana. Se voc\xEA encontrar um guarda, pergunte se eles j\xE1 ouviram
+      algo sobre ele.\u201D\n\n\u201CClaro, farei isso!\u201D responde Ariel, determinada.
+      A mulher a observa, aliviada por algu\xE9m se importar. \u201CObrigada, querida.
+      Preciso ir, mas espero que voc\xEA encontre algo.\u201D\n\nAriel acena enquanto
+      a Senhora Endicott se afasta rapidamente em dire\xE7\xE3o a outro guarda que
+      passa, ainda preocupada, mas pelo menos um pouco mais aliviada."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 5
+    triggers: []
+    sound: 
+  - dialogueId: 5
+    descriptionText: "Ap\xF3s o encontro, Ariel continua a caminho do campo de treinamento,
+      o pensamento pesado em seu cora\xE7\xE3o. E se ela fosse atr\xE1s de Jamie?
+      O que teria acontecido com ele? A bravura que costumava ter agora parece t\xE3o
+      distante. Ela j\xE1 sabe se cuidar, mas ser\xE1 que teria coragem de deixar
+      sua vila e adentrar a escura floresta que a cerca? Ser\xE1 que ela seria forte
+      o suficiente?"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
   backgroundName: Ariel_gameplay_bkg_002
+  sound: 

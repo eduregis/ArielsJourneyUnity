@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stage_0
   m_EditorClassIdentifier: 
   stageId: 0
+  stageName: ORDINARYWORLD_HOUSE
   nextStageId: 1
   dialogues:
   - dialogueId: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
       um deles \xE9 como voc\xEA, tentando fazer a diferen\xE7a,\u201D Henry respondeu,
       sua voz encorajadora. \u201CMas voc\xEA precisa se lembrar que tamb\xE9m \xE9
       importante cuidar de si mesma. A guerra n\xE3o \xE9 um jogo.\u201D\n\nAriel
-      assentiu, sabendo que ele estava certo."
+      assentiu, sabendo que ela estava certa."
     firstCardText: 
     secondCardText: 
     firstCardImage: 

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_5
+  m_EditorClassIdentifier: 
+  stageId: 5
+  stageName: ORDINARYWORLD_WALKING
+  nextStageId: 6
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Com mais calma, agora que terminou seu treino, Ariel caminha
+      em dire\xE7\xE3o \xE0 torre de vigia. Olhando em volta enquanto cruza o centro
+      da vila, ela se depara com um senhor desconhecido, ajoelhado nos degraus da
+      capela."
+    firstCardText: "Continuar em dire\xE7\xE3o da Torre."
+    secondCardText: Se aproximar do senhor.
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 2
+    nextSecondDialogueId: 1
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "O velho est\xE1 t\xE3o concentrado em sua ora\xE7\xE3o que
+      n\xE3o percebe sua presen\xE7a."
+    firstCardText: "Continuar em dire\xE7\xE3o da Torre."
+    secondCardText: Escutar.
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: 2
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "Ariel se concentra e consegue escutar parte de sua s\xFAplica:
+      \u201CPelo fim desta maldita guerra\u2026 Eu j\xE1 n\xE3o tenho mais o que
+      perder. Meus dois \xFAnicos filhos\u2026 Quando isso vai acabar?\u201D Ariel
+      se sente mal por invadir um momento t\xE3o pessoal, ent\xE3o decide se afastar
+      e continuar em dire\xE7\xE3o \xE0 torre."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  backgroundName: 
+  sound: 
