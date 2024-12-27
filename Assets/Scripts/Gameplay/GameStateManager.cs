@@ -108,11 +108,11 @@ public class GameStateManager : MonoBehaviour {
     }
 
     private void OnChoiceSelected(int nextDialogueId) {
+        UIManager.Instance.ClearText();
         scrollText.CloseScroll(() => {
             GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Bottom, 0.5f, () => {
                 GameplayAnchorManager.Instance.ShowContainer(false);
                 UIManager.Instance.FlipCards();
-                UIManager.Instance.ClearText();
                 GoToNextDialogue(nextDialogueId);
             });
         });

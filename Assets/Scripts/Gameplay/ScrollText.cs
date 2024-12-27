@@ -16,8 +16,8 @@ public class ScrollText : MonoBehaviour {
     private Vector3 topStartPos;
     private Vector3 bottomStartPos;
 
-    private const float topExpandedY = 210f;    // Posição Y final do topo ao abrir
-    private const float bottomExpandedY = -210f; // Posição Y final do bottom ao abrir
+    private const float topExpandedY = 310f;    // Posição Y final do topo ao abrir
+    private const float bottomExpandedY = -310f; // Posição Y final do bottom ao abrir
     private const float bodyExpandedHeight = 650f; // Altura final do corpo ao abrir
     private Coroutine typingCoroutine;
     private string fullText;
