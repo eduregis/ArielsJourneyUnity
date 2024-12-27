@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour {
     public static GameStateManager Instance;
+    public ScrollText scrollText;
     private StageData currentStage;
     private Dialogue currentDialogue;
 
@@ -107,11 +108,13 @@ public class GameStateManager : MonoBehaviour {
     }
 
     private void OnChoiceSelected(int nextDialogueId) {
-        GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Bottom, 0.5f, () => {
-            GameplayAnchorManager.Instance.ShowContainer(false);
-            UIManager.Instance.FlipCards();
-            UIManager.Instance.ClearText();
-            GoToNextDialogue(nextDialogueId);
+        scrollText.CloseScroll(() => {
+            GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Bottom, 0.5f, () => {
+                GameplayAnchorManager.Instance.ShowContainer(false);
+                UIManager.Instance.FlipCards();
+                UIManager.Instance.ClearText();
+                GoToNextDialogue(nextDialogueId);
+            });
         });
     }
 
