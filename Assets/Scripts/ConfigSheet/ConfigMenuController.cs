@@ -31,7 +31,7 @@ public class ConfigMenuController : MonoBehaviour
 
     public void RestartGame() {
         // Trocar aqui quando quiser testar um stage diretamente
-        GameDataManager.SetStage(0);
+        GameDataManager.SetStage(8);
         GameDataManager.SetDialogue(0);
         string currentScene = SceneManager.GetActiveScene().name;
         if (currentScene == "GameplayScene") {
