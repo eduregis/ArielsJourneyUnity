@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_6
+  m_EditorClassIdentifier: 
+  stageId: 6
+  stageName: ORDINARYWORLD_WATCHTOWER
+  nextStageId: 7
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Ariel se aproxima da grande torre de vigia, localizada em uma
+      das extremidades do muro que circunda a vila de Ordon. Mesmo de longe, ela
+      nota a silhueta familiar de Philip no alto, um olhar atento e determinado no
+      rosto cansado. Ela acena e chama por ele.\n\nPhilip vira ao ouvir sua voz e
+      acena de volta. \u201CAriel! Suba aqui, mas n\xE3o posso conversar muito. O
+      dever me chama, como sempre.\u201D \n\nEla sobe os degraus da torre e logo
+      est\xE1 ao seu lado, observando o vasto campo al\xE9m dos muros. O c\xE9u est\xE1
+      tingido de um cinza melanc\xF3lico, refletindo o clima da vila."
+    firstCardText: Conversar sobre a Espada de Henry
+    secondCardText: Perguntar sobre a guerra e a guarda
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: 2
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "Ariel: \"Henry terminou sua nova espada. Ele disse que era
+      o melhor trabalho que j\xE1 fez.\u201D\n\nPhilip sorri, o rosto se iluminando
+      por um momento. \u201CS\xE9rio? Aquele rapaz nunca falha, sempre me surpreendendo.
+      Vou pegar essa espada assim que meu turno acabar. Eu mal posso esperar para
+      ver o trabalho dele.\u201D\n\nEle ri e acrescenta, mais s\xE9rio: \u201CSabe,
+      ele \xE9 mais do que s\xF3 um amigo pra mim. A vila toda \xE9 grata ao que
+      ele faz, Ariel. Quando tudo isso acabar\u2026 bem, quero retribuir de algum
+      jeito.\u201D Ele desvia o olhar, pensativo."
+    firstCardText: Perguntar sobre a guerra e a guarda
+    secondCardText: Perguntar sobre a Sra. Endicott
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 4
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "Ariel: \"Voc\xEA mencionou que a maioria da guarda foi convocada\u2026
+      Como estamos lidando com isso?\u201D\n\nPhilip suspira, visivelmente cansado.
+      \u201CQuase toda nossa for\xE7a foi levada para o fronte, s\xF3 restam alguns
+      de n\xF3s por aqui. A responsabilidade \xE9 esmagadora.\u201D Ele faz uma pausa,
+      encarando o horizonte. \u201COs equipamentos que seu irm\xE3o faz s\xE3o a
+      nossa \xFAnica linha de defesa. Henry \xE9 um dos motivos pelos quais ainda
+      temos uma chance.\u201D\n\nAriel responde: \"S\xF3 o Henry mesmo, sempre dando
+      tudo de si pela vila.\u201D\n\nPhilip esbo\xE7a um sorriso triste. \u201C\xC9\u2026
+      diga a ele que todos n\xF3s somos gratos. Ele merece ouvir isso.\u201D"
+    firstCardText: Conversar sobre a Espada de Henry
+    secondCardText: Perguntar sobre a Sra. Endicott
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 6
+    triggers: []
+    sound: 
+  - dialogueId: 3
+    descriptionText: "Ariel: \"Voc\xEA mencionou que a maioria da guarda foi convocada\u2026
+      Como estamos lidando com isso?\u201D\n\nPhilip suspira, visivelmente cansado.
+      \u201CQuase toda nossa for\xE7a foi levada para o fronte, s\xF3 restam alguns
+      de n\xF3s por aqui. A responsabilidade \xE9 esmagadora.\u201D Ele faz uma pausa,
+      encarando o horizonte. \u201COs equipamentos que seu irm\xE3o faz s\xE3o a
+      nossa \xFAnica linha de defesa. Henry \xE9 um dos motivos pelos quais ainda
+      temos uma chance.\u201D\n\nAriel responde: \"S\xF3 o Henry mesmo, sempre dando
+      tudo de si pela vila.\u201D\n\nPhilip esbo\xE7a um sorriso triste. \u201C\xC9\u2026
+      diga a ele que todos n\xF3s somos gratos. Ele merece ouvir isso.\u201D"
+    firstCardText: Perguntar sobre a Sra. Endicott
+    secondCardText: "Ficar em sil\xEAncio"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 7
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 4
+    descriptionText: "Ariel: \"Philip, sobre a senhora que perdeu o filho\u2026 ouvi
+      dizer que ele ainda n\xE3o voltou. Voc\xEA sabe de alguma coisa?\u201D\n\nPhilip
+      suspira, esfregando a nuca. \u201CEstou tentando ajudar ela faz um tempo, mas
+      com t\xE3o poucos guardas na vila, est\xE1 cada vez mais dif\xEDcil. Prometi
+      \xE0 senhora Endicott que faria o poss\xEDvel, mas\u2026 Ariel, honestamente,
+      \xE9 uma promessa dif\xEDcil de cumprir. \xC9 como procurar uma agulha no palheiro.\u201D"
+    firstCardText: Perguntar sobre a guerra e a guarda
+    secondCardText: "Ficar em sil\xEAncio"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 8
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 5
+    descriptionText: "Ariel: \"Henry terminou sua nova espada. Ele disse que era
+      o melhor trabalho que j\xE1 fez.\u201D\n\nPhilip sorri, o rosto se iluminando
+      por um momento. \u201CS\xE9rio? Aquele rapaz nunca falha, sempre me surpreendendo.
+      Vou pegar essa espada assim que meu turno acabar. Eu mal posso esperar para
+      ver o trabalho dele.\u201D\n\nEle ri e acrescenta, mais s\xE9rio: \u201CSabe,
+      ele \xE9 mais do que s\xF3 um amigo pra mim. A vila toda \xE9 grata ao que
+      ele faz, Ariel. Quando tudo isso acabar\u2026 bem, quero retribuir de algum
+      jeito.\u201D Ele desvia o olhar, pensativo."
+    firstCardText: Perguntar sobre a Sra. Endicott
+    secondCardText: "Ficar em sil\xEAncio"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 7
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 6
+    descriptionText: "Ariel: \"Philip, sobre a senhora que perdeu o filho\u2026 ouvi
+      dizer que ele ainda n\xE3o voltou. Voc\xEA sabe de alguma coisa?\u201D\n\nPhilip
+      suspira, esfregando a nuca. \u201CEstou tentando ajudar ela faz um tempo, mas
+      com t\xE3o poucos guardas na vila, est\xE1 cada vez mais dif\xEDcil. Prometi
+      \xE0 senhora Endicott que faria o poss\xEDvel, mas\u2026 Ariel, honestamente,
+      \xE9 uma promessa dif\xEDcil de cumprir. \xC9 como procurar uma agulha no palheiro.\u201D"
+    firstCardText: Conversar sobre a Espada de Henry
+    secondCardText: "Ficar em sil\xEAncio"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 9
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 7
+    descriptionText: "Ariel: \"Philip, sobre a senhora que perdeu o filho\u2026 ouvi
+      dizer que ele ainda n\xE3o voltou. Voc\xEA sabe de alguma coisa?\u201D\n\nPhilip
+      suspira, esfregando a nuca. \u201CEstou tentando ajudar ela faz um tempo, mas
+      com t\xE3o poucos guardas na vila, est\xE1 cada vez mais dif\xEDcil. Prometi
+      \xE0 senhora Endicott que faria o poss\xEDvel, mas\u2026 Ariel, honestamente,
+      \xE9 uma promessa dif\xEDcil de cumprir. \xC9 como procurar uma agulha no palheiro.\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 8
+    descriptionText: "Ariel: \"Voc\xEA mencionou que a maioria da guarda foi convocada\u2026
+      Como estamos lidando com isso?\u201D\n\nPhilip suspira, visivelmente cansado.
+      \u201CQuase toda nossa for\xE7a foi levada para o fronte, s\xF3 restam alguns
+      de n\xF3s por aqui. A responsabilidade \xE9 esmagadora.\u201D Ele faz uma pausa,
+      encarando o horizonte. \u201COs equipamentos que seu irm\xE3o faz s\xE3o a
+      nossa \xFAnica linha de defesa. Henry \xE9 um dos motivos pelos quais ainda
+      temos uma chance.\u201D\n\nAriel responde: \"S\xF3 o Henry mesmo, sempre dando
+      tudo de si pela vila.\u201D\\n\\nPhilip esbo\xE7a um sorriso triste. \u201C\xC9\u2026
+      diga a ele que todos n\xF3s somos gratos. Ele merece ouvir isso.\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 9
+    descriptionText: "Ariel: \"Henry terminou sua nova espada. Ele disse que era
+      o melhor trabalho que j\xE1 fez.\u201D\n\nPhilip sorri, o rosto se iluminando
+      por um momento. \u201CS\xE9rio? Aquele rapaz nunca falha, sempre me surpreendendo.
+      Vou pegar essa espada assim que meu turno acabar. Eu mal posso esperar para
+      ver o trabalho dele.\u201D\n\nEle ri e acrescenta, mais s\xE9rio: \u201CSabe,
+      ele \xE9 mais do que s\xF3 um amigo pra mim. A vila toda \xE9 grata ao que
+      ele faz, Ariel. Quando tudo isso acabar\u2026 bem, quero retribuir de algum
+      jeito.\u201D Ele desvia o olhar, pensativo."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 10
+    descriptionText: "Ap\xF3s um breve sil\xEAncio...\n\nAriel: \u201CPosso fazer
+      alguma coisa?\u201D\n\nPhilip hesita e depois sorri, embora exausto. \u201CEu
+      sei que voc\xEA est\xE1 treinando duro e quer ajudar, mas \xE9 perigoso demais,
+      Ariel. Essa guerra\u2026 ela cobra muito de n\xF3s. Mas fico feliz em ver seu
+      esp\xEDrito. Voc\xEA me lembra\u2026 bem, voc\xEA me lembra de como \xE9ramos
+      antes de tudo isso come\xE7ar.\u201D\n\nEle ajeita o escudo no bra\xE7o. \u201CMas
+      n\xE3o se preocupe, vamos encontr\xE1-lo. Mesmo com os recursos limitados,
+      eu ainda tenho f\xE9.\u201D"
+    firstCardText: Perguntar sobre os bons tempos
+    secondCardText: Insistir para ajudar na busca
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: 11
+    nextSecondDialogueId: 12
+    triggers: []
+    sound: 
+  - dialogueId: 11
+    descriptionText: "Ariel: \"Eu posso lidar com isso, Philip. Se voc\xEA me der
+      uma chance, posso ir para a floresta e procurar.\"\n\nPhilip franze a testa
+      e balan\xE7a a cabe\xE7a. \u201CN\xE3o, Ariel, isso n\xE3o \xE9 um treino.
+      \xC9 perigoso demais, e se algo acontecer com voc\xEA\u2026 bem, eu n\xE3o
+      poderia encarar o Henry. Vamos nos focar no que voc\xEA precisa fazer: treinar
+      e ficar forte. A ajuda vir\xE1 quando voc\xEA estiver pronta.\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 13
+    nextSecondDialogueId: 13
+    triggers: []
+    sound: 
+  - dialogueId: 12
+    descriptionText: "Ariel: \"Eu posso lidar com isso, Philip. Se voc\xEA me der
+      uma chance, posso ir para a floresta e procurar.\"\n\nPhilip franze a testa
+      e balan\xE7a a cabe\xE7a. \u201CN\xE3o, Ariel, isso n\xE3o \xE9 um treino.
+      \xC9 perigoso demais, e se algo acontecer com voc\xEA\u2026 bem, eu n\xE3o
+      poderia encarar o Henry. Vamos nos focar no que voc\xEA precisa fazer: treinar
+      e ficar forte. A ajuda vir\xE1 quando voc\xEA estiver pronta.\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 13
+    nextSecondDialogueId: 13
+    triggers: []
+    sound: 
+  - dialogueId: 13
+    descriptionText: "Ariel observa Philip mais uma vez, seu cora\xE7\xE3o apertado
+      ao ver o peso da responsabilidade em seus ombros. Ela entende que a vila depende
+      dele e de sua for\xE7a, e, mesmo cansado, ele ainda tenta manter um esp\xEDrito
+      otimista.\n\n\u201CA vila precisa de voc\xEA, Philip,\u201D Ariel diz, com
+      um toque de preocupa\xE7\xE3o na voz.\n\nEle sorri, tentando amenizar. \u201CPrecisamos
+      de todos n\xF3s. N\xE3o se preocupe comigo, Ariel. Cuide do seu treinamento,
+      e logo estar\xE1 ao nosso lado, defendendo o que \xE9 importante.\u201D\n\nEles
+      se despedem, e Ariel desce da torre, o cora\xE7\xE3o ainda cheio de perguntas.
+      Ela se sente mais determinada, mas tamb\xE9m percebe o quanto precisa aprender
+      para estar pronta."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  backgroundName: Ariel_gameplay_bkg_001
+  sound: 

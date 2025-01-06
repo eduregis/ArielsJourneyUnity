@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_7
+  m_EditorClassIdentifier: 
+  stageId: 7
+  stageName: 
+  nextStageId: 0
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Ap\xF3s uma longa caminhada, Ariel finalmente chega em casa,
+      exausta, mas ainda um pouco pensativa. Ela vai direto para a forja, procurando
+      seu irm\xE3o, Henry, para avisar que est\xE1 de volta. Ao entrar, Henry, ocupado
+      com seu \xFAltimo projeto, a escuta e se vira bruscamente antes de abrir um
+      sorriso caloroso.\n\nHenry: \"Ah! Bem-vinda de volta. Como foi o treino hoje?\""
+    firstCardText: "\u201CNada demais\u2026\u201D"
+    secondCardText: "\u201CFoi \xF3timo!\u201D"
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "\u201CFoi \xF3timo! Daqui a pouco ele n\xE3o vai mais ter o
+      que me ensinar!\u201D \u2013 Ariel exclama com confian\xE7a, e Henry sorri,
+      fazendo sons de uma multid\xE3o vibrando. \u201CAriel! Ariel! Ariel!\u201D\n\nHenry:
+      \"\xC9 mesmo? Vou ficar de olho \u2013 parece que voc\xEA vai ser a melhor
+      guarda que esse reino j\xE1 viu.\"\n\nO orgulho toma conta da voz de Henry,
+      e por um instante, o cansa\xE7o de Ariel desaparece, substitu\xEDdo por determina\xE7\xE3o."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 2
+    nextSecondDialogueId: 2
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "'Ariel: \"Ah, e o treinador disse que j\xE1 passou da hora
+      de voc\xEA come\xE7ar a treinar tamb\xE9m.\"\n\nHenry ri, um pouco constrangido.
+      \u201CHaha, ele sabe que eu n\xE3o levo jeito pra luta como voc\xEA\u2026\u201D\n\nAriel:
+      \"N\xE3o se preocupe, maninho. Eu vou te proteger!\" Ariel sorri, se posicionando
+      em uma postura defensiva de brincadeira. Henry ri, mas logo o sorriso se torna
+      um pouco mais s\xE9rio.\n\nHenry: \"Mesmo assim\u2026 as coisas t\xEAm sido
+      dif\xEDceis l\xE1 fora, Ariel. Eu s\xF3 quero ter certeza de que voc\xEA tamb\xE9m
+      estar\xE1 segura.\u201D\\n\\nAp\xF3s uma pausa, Henry lan\xE7a um olhar para
+      um canto mais escondido da forja, como se lembrasse de algo importante."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 3
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  - dialogueId: 3
+    descriptionText: "Henry: \"Falando em te proteger... achei que j\xE1 estava na
+      hora de uma surpresa.\"\n\nCom um movimento r\xE1pido, Henry alcan\xE7a algo
+      nas sombras e ergue uma espada rec\xE9m-forjada. A l\xE2mina brilha na luz
+      do fim da tarde, mas \xE9 o cabo que chama a aten\xE7\xE3o de Ariel. Entalhado
+      com um detalhe delicado, o punho \xE9 moldado no formato de uma Flor-de-Mandacaru
+      \u2013 uma flor que desabrocha sob o sol intenso, assim como Ariel cresceu
+      e se fortaleceu atrav\xE9s do treinamento."
+    firstCardText: "\u201CEla \xE9 maravilhosa\u2026\u201D"
+    secondCardText: "\u201CNossa\u2026 Muito obrigada!\u201D"
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 4
+    nextSecondDialogueId: 4
+    triggers: []
+    sound: 
+  - dialogueId: 4
+    descriptionText: "Henry sorri, satisfeito com a rea\xE7\xE3o dela.\n\nHenry:
+      \"Essa flor sempre foi a sua favorita, lembra? Forte, brilhante\u2026 assim
+      como voc\xEA.\"\n\nH\xE1 um momento de sil\xEAncio entre os dois enquanto Ariel
+      percebe o cuidado por tr\xE1s do design, o Mandacaru simbolizando for\xE7a,
+      mesmo nas condi\xE7\xF5es mais dif\xEDceis \u2013 muito parecido com sua pr\xF3pria
+      jornada.\n\nHenry: \"Use com sabedoria. E n\xE3o se esque\xE7a \u2013 n\xE3o
+      \xE9 s\xF3 a espada que te torna forte.\"\n\nAriel acena, enquanto um novo
+      senso de orgulho e responsabilidade toma conta dela ao segurar o punho da espada.\n\nHenry
+      (sorrindo): \u201CAgora, v\xE1 tomar banho. Vou s\xF3 terminar esse escudo
+      e preparar o jantar. Voc\xEA vai precisar de energia para amanh\xE3.\u201D\n\nAo
+      se afastar, Ariel escuta o som r\xEDtmico do martelo de Henry ecoando pela
+      forja, moldando o novo escudo \u2013 e a esperan\xE7a compartilhada dos dois
+      para os dias que vir\xE3o."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 5
+    triggers: []
+    sound: 
+  - dialogueId: 5
+    descriptionText: "Ap\xF3s alguns minutos, Ariel escuta um som abafado, seguido
+      pelo sil\xEAncio repentino. As marteladas de Henry, que at\xE9 ent\xE3o preenchiam
+      o ar, cessam abruptamente. Uma sensa\xE7\xE3o de inquieta\xE7\xE3o cresce em
+      seu peito, e sem pensar duas vezes, ela corre em dire\xE7\xE3o \xE0 forja.\n\nAo
+      chegar, Ariel se depara apenas com a forja ainda acesa, o calor das chamas
+      e o ambiente deserto. Henry n\xE3o est\xE1 l\xE1, e seu cora\xE7\xE3o come\xE7a
+      a bater mais r\xE1pido. Ela se pergunta onde ele poderia estar, deixando tudo
+      assim, inacabado."
+    firstCardText: "Gritar pelo irm\xE3o e procur\xE1-lo ao redor."
+    secondCardText: Respirar fundo e ouvir atentamente ao redor.
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 6
+    nextSecondDialogueId: 7
+    triggers: []
+    sound: 
+  - dialogueId: 6
+    descriptionText: "Ariel sente o p\xE2nico crescendo e, sem conseguir se conter,
+      come\xE7a a chamar o nome de Henry. \"Henry! Onde voc\xEA est\xE1?!\" Sua voz
+      ecoa na quietude, mas n\xE3o obt\xE9m resposta. Determinada, ela corre para
+      a borda da floresta, vasculhando cada canto com os olhos. Ao longe, ela nota
+      uma sombra movendo-se rapidamente entre as \xE1rvores. Com uma onda de determina\xE7\xE3o,
+      Ariel se lan\xE7a em persegui\xE7\xE3o, sua mente focada em encontrar seu irm\xE3o
+      \u2013 ou entender o que est\xE1 acontecendo."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  - dialogueId: 7
+    descriptionText: "'Ariel tenta acalmar o turbilh\xE3o de pensamentos. Ela respira
+      fundo e se esfor\xE7a para ouvir qualquer som. Ao prestar aten\xE7\xE3o, percebe
+      um leve farfalhar vindo da dire\xE7\xE3o da floresta ao lado da casa. Seu corpo
+      se tenciona, e, sem hesitar, ela segura firme sua nova espada e avan\xE7a cuidadosamente
+      em dire\xE7\xE3o ao som, determinada a encontrar respostas, mas sem alertar
+      quem quer que esteja \xE0 espreita."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  backgroundName: Ariel_gameplay_bkg_002
+  sound: 

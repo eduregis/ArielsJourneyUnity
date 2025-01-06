@@ -54,5 +54,5 @@ MonoBehaviour:
     nextSecondDialogueId: -1
     triggers: []
     sound: 
-  backgroundName: 
+  backgroundName: Ariel_gameplay_bkg_002
   sound: 

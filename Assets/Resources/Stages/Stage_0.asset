@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 0
   stageName: ORDINARYWORLD_HOUSE
-  nextStageId: 1
+  nextStageId: 8
   dialogues:
   - dialogueId: 0
     descriptionText: "A noite envolvia a pequena vila de <green>Ordon</green> em
@@ -31,7 +31,8 @@ MonoBehaviour:
     - HJ_01
     sound: 
   - dialogueId: 1
-    descriptionText: "\u201CVamos, dorminhoca\u2026 O caf\xE9 est\xE1 quase pronto!\u201D"
+    descriptionText: "\u201CVamos, <blue>dorminhoca</blue>\u2026 O caf\xE9 est\xE1
+      quase pronto!\u201D"
     firstCardText: Abrir os olhos
     secondCardText: Abrir os olhos
     firstCardImage: Ariel_card_002
