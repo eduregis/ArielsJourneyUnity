@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_3
+  m_EditorClassIdentifier: 
+  stageId: 3
+  stageName: ORDINARYWORLD_TRAINING
+  nextStageId: 4
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Seu professor, um homem robusto e experiente, observa-a com
+      um sorriso divertido. Ela \xE9 sua aluna mais promissora, e ele n\xE3o perde
+      a chance de brincar com ela. O som dos treinos ecoa ao seu redor, mas, mesmo
+      em meio \xE0 escurid\xE3o da guerra, ele consegue manter um esp\xEDrito leve.\n\n\u201CHoje,
+      vamos nos concentrar nas mec\xE2nicas de luta,\u201D ele come\xE7a, sua voz
+      grave misturada a um tom de brincadeira. \u201CEspero que voc\xEA esteja pronta,
+      Ariel. N\xE3o quero que minha estrela se transforme em uma estrela cadente,
+      se \xE9 que me entende!\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: 1
+    triggers: []
+    sound: 
+  - dialogueId: 1
+    descriptionText: "Seu professor, um homem robusto e experiente, observa-a com
+      um sorriso divertido. Ela \xE9 sua aluna mais promissora, e ele n\xE3o perde
+      a chance de brincar com ela. O som dos treinos ecoa ao seu redor, mas, mesmo
+      em meio \xE0 escurid\xE3o da guerra, ele consegue manter um esp\xEDrito leve.\n\n\u201CHoje,
+      vamos nos concentrar nas mec\xE2nicas de luta,\u201D ele come\xE7a, sua voz
+      grave misturada a um tom de brincadeira. \u201CEspero que voc\xEA esteja pronta,
+      Ariel. N\xE3o quero que minha estrela se transforme em uma estrela cadente,
+      se \xE9 que me entende!\u201D"
+    firstCardText: Esperar e Observar
+    secondCardText: Atacar Prematuramente
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: 2
+    nextSecondDialogueId: 3
+    triggers: []
+    sound: 
+  - dialogueId: 2
+    descriptionText: "Ariel se posiciona, mantendo a defesa alta, atenta a cada movimento
+      do professor. Ela percebe que ele est\xE1 confiante, mas uma leve hesita\xE7\xE3o
+      em seu p\xE9 esquerdo a faz pensar que ele pode estar se preparando para um
+      ataque.\n\n\u201CMuito bem, Ariel! Olhos atentos como um falc\xE3o. Mas lembre-se,
+      s\xF3 esperar n\xE3o \xE9 suficiente. O ataque \xE9 t\xE3o importante quanto
+      a defesa!\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 4
+    nextSecondDialogueId: 4
+    triggers: []
+    sound: 
+  - dialogueId: 3
+    descriptionText: "Ariel tenta um ataque direto, lan\xE7ando sua espada em um
+      golpe r\xE1pido. No entanto, o professor se move com facilidade, desviando
+      e contra-atacando. O impacto da madeira em seu escudo faz com que ela se desequilibre
+      um pouco.\n\nResultado: \u201CVoc\xEA parece uma crian\xE7a em uma loja de
+      doces, Ariel! Isso n\xE3o \xE9 um passeio. Ataques precipitados n\xE3o levam
+      \xE0 vit\xF3ria. Vamos de novo!\u201D\n\nEla volta a se posicionar, determinada
+      a fazer melhor."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: 1
+    triggers: []
+    sound: 
+  - dialogueId: 4
+    descriptionText: "O professor avan\xE7a e direciona um ataque r\xE1pido pela
+      direita! Ariel..."
+    firstCardText: "Defletir Ataque R\xE1pido"
+    secondCardText: Desviar
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 5
+    nextSecondDialogueId: 6
+    triggers: []
+    sound: 
+  - dialogueId: 5
+    descriptionText: "O professor inicia uma s\xE9rie de ataques r\xE1pidos, suas
+      l\xE2minas de madeira cortando o ar com agilidade. Ariel se concentra, movendo-se
+      para o lado e desviando com o escudo. Cada defesa bem-sucedida a faz sentir-se
+      mais confiante, quase dan\xE7ando com o ataque dele.\n\nResultado: \u201CAh,
+      isso \xE9 que \xE9 uma defesa! Voc\xEA quase me fez acreditar que eu sou o
+      alvo aqui! Continue assim e talvez eu tenha que me preparar melhor!\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 7
+    nextSecondDialogueId: 7
+    triggers: []
+    sound: 
+  - dialogueId: 6
+    descriptionText: "N\xE3o foi r\xE1pido o suficiente, a espada de madeira para
+      a um cent\xEDmetro de seu pesco\xE7o.\n\n\u201CEscolha com cuidado! Seu escudo
+      poderia aguentar um ataque como r\xE1pido como esse. Nem sempre voc\xEA vai
+      ter tempo de desviar. Outra vez!\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 4
+    nextSecondDialogueId: 4
+    triggers: []
+    sound: 
+  - dialogueId: 7
+    descriptionText: "\u201CBoa!\u201D Agora \xE9 o seu momento de-"
+    firstCardText: Esperar e analisar
+    secondCardText: Atacar
+    firstCardImage: Ariel_card_001
+    secondCardImage: Ariel_card_002
+    nextFirstDialogueId: 8
+    nextSecondDialogueId: 9
+    triggers: []
+    sound: 
+  - dialogueId: 8
+    descriptionText: "'O instrutor aproveita o movimento e rapidamente atacar Ariel,
+      mas a espada para momentos antes de acertar seu rosto.\n\nVoc\xEA hesitou,
+      deviater aproveitado a oportunidade! Seu oponenete n\xE3o lhe dar\xE1 outra
+      chance!\u201D\n\nO professor suspira e sorri \u201CMas de forma geral, foi
+      um bom treino.\u201D"
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 9
+    descriptionText: "Ariel nota qwue seu oponente abaixou a guarda! Com um empurr\xE3o
+      do escudo, o oponente se desestabiliza e cai pra tr\xE1s. \n\n\u201CExcelente!\u201D
+      exclama seu professor, um sorriso de aprova\xE7\xE3o no rosto. \u201CVoc\xEA
+      viu a abertura e se aproveitou dela. O combate \xE9 uma dan\xE7a. Mantenha-se
+      alerta e voc\xEA sempre encontrar\xE1 uma maneira de triunfar!\u201D\n\nMotivada
+      pelas palavras dele, Ariel se recolhe, pronta para mais, sabendo que cada sess\xE3o
+      de treinamento a aproxima de seu sonho de se tornar uma verdadeira guardi\xE3
+      de Ordon."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 10
+    nextSecondDialogueId: 10
+    triggers: []
+    sound: 
+  - dialogueId: 10
+    descriptionText: "\u201CVoc\xEA quer tentar outra vez do in\xEDcio?\u201D"
+    firstCardText: Sim
+    secondCardText: "N\xE3o"
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_001
+    nextFirstDialogueId: 1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  backgroundName: Ariel_gameplay_bkg_002
+  sound: 

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stage_0
   m_EditorClassIdentifier: 
   stageId: 0
-  nextStageId: 1
+  stageName: ORDINARYWORLD_HOUSE
+  nextStageId: 8
   dialogues:
   - dialogueId: 0
     descriptionText: "A noite envolvia a pequena vila de <green>Ordon</green> em
@@ -30,7 +31,8 @@ MonoBehaviour:
     - HJ_01
     sound: 
   - dialogueId: 1
-    descriptionText: "\u201CVamos, dorminhoca\u2026 O caf\xE9 est\xE1 quase pronto!\u201D"
+    descriptionText: "\u201CVamos, <blue>dorminhoca</blue>\u2026 O caf\xE9 est\xE1
+      quase pronto!\u201D"
     firstCardText: Abrir os olhos
     secondCardText: Abrir os olhos
     firstCardImage: Ariel_card_002
@@ -158,7 +160,7 @@ MonoBehaviour:
       um deles \xE9 como voc\xEA, tentando fazer a diferen\xE7a,\u201D Henry respondeu,
       sua voz encorajadora. \u201CMas voc\xEA precisa se lembrar que tamb\xE9m \xE9
       importante cuidar de si mesma. A guerra n\xE3o \xE9 um jogo.\u201D\n\nAriel
-      assentiu, sabendo que ele estava certo."
+      assentiu, sabendo que ela estava certa."
     firstCardText: 
     secondCardText: 
     firstCardImage: 

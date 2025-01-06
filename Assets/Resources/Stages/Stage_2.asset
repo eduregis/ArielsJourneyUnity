@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a777b642e2384e9aca253baa9c342, type: 3}
+  m_Name: Stage_2
+  m_EditorClassIdentifier: 
+  stageId: 2
+  stageName: ORDINARYWORLD_PRETRAINING
+  nextStageId: 3
+  dialogues:
+  - dialogueId: 0
+    descriptionText: "Seus pensamentos s\xE3o interrompidos pela voz grave e familiar
+      de seu treinador, um homem com uma aura leve, que tentava manter o moral da
+      turma alto, apesar das circunst\xE2ncias sombrias.\n\n\u201CBom dia, Ariel!
+      Voc\xEA chegou atrasada, para variar\u2026 Mas tudo bem. Est\xE1 pronta para
+      o treino?\u201D\n\n\u201CEu nasci pronta!\u201D ela responde, um sorriso aparecendo
+      em seu rosto, mesmo que a preocupa\xE7\xE3o persista em seu cora\xE7\xE3o."
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: -1
+    nextSecondDialogueId: -1
+    triggers: []
+    sound: 
+  backgroundName: Ariel_gameplay_bkg_001
+  sound: 

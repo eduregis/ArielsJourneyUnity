@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New StageData", menuName = "Game/StageData")]
 public class StageData : ScriptableObject {
     public int stageId;
+    public string stageName;
     public int nextStageId; // ID do próximo estágio ou -1 para indicar fim do jogo;
     public List<Dialogue> dialogues;
     public string backgroundName;
