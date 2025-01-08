@@ -26,11 +26,11 @@ public class GameStateManager : MonoBehaviour {
 
     // Inicia o game com Stage 0 
     public void StartGame() {
-        int stage = GameDataManager.GetStage();
+        string stage = GameDataManager.GetStage();
         LoadStage(stage);
     }
 
-    private void LoadStage(int stageId) {
+    private void LoadStage(string stageId) {
         currentStage = Resources.Load<StageData>($"Stages/Stage_{stageId}");
         if (currentStage == null) {
             Debug.LogError($"Stage {stageId} not found in Resources!");
@@ -121,7 +121,7 @@ public class GameStateManager : MonoBehaviour {
     private void GoToNextDialogue(int nextDialogueId) {
         GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Top, 0.5f, () => {
             if (nextDialogueId == -1) { // Supondo que -1 significa fim do Stage
-                if (currentStage.nextStageId != -1) {
+                if (currentStage.nextStageId != "-1") {
                     GameDataManager.SetStage(currentStage.nextStageId);
                     GameDataManager.SetDialogue(0);
                     LoadStage(currentStage.nextStageId);

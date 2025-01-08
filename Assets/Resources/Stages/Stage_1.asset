@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 1
   stageName: ORDINARYWORLD_TOWN
-  nextStageId: 2
+  nextStageId: Interlude01
   dialogues:
   - dialogueId: 0
     descriptionText: "Depois de alguns minutos caminhando na estrada de barro, Ariel
