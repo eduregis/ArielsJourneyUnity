@@ -63,6 +63,14 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    public void CompleteTyping() {
+        if (scrollText != null) {
+            scrollText.CompleteTyping();
+        } else {
+            Debug.LogError("ScrollText is not assigned in the UIManager!");
+        }
+    }
+
     public void ChangeBackground(string backgroundName) {
         BackgroundManager.Instance.ChangeBackground(backgroundName);
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 0
   stageName: ORDINARYWORLD_HOUSE
-  nextStageId: 8
+  nextStageId: 1
   dialogues:
   - dialogueId: 0
     descriptionText: "A noite envolvia a pequena vila de <green>Ordon</green> em
