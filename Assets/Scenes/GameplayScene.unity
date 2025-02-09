@@ -407,6 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472913065}
   - component: {fileID: 472913066}
+  - component: {fileID: 472913067}
   m_Layer: 5
   m_Name: ScrollableText
   m_TagString: Untagged
@@ -464,6 +465,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &472913067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472913064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb6e7c04b483ee42bd2d5cdf2fb7a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532788330
 GameObject:
   m_ObjectHideFlags: 0
