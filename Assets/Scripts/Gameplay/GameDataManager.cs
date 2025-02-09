@@ -75,12 +75,12 @@ public static class GameDataManager {
     }
 
     // Métodos para Gerenciar Stage
-    public static int GetStage() {
-        return PlayerPrefs.GetInt(StageKey, 0);
+    public static string GetStage() {
+        return PlayerPrefs.GetString(StageKey, "0");
     }
 
-    public static void SetStage(int value) {
-        PlayerPrefs.SetInt(StageKey, value);
+    public static void SetStage(string value) {
+        PlayerPrefs.SetString(StageKey, value);
         PlayerPrefs.Save();
     }
 
