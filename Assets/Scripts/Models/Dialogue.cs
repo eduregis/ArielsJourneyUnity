@@ -13,4 +13,13 @@ public class Dialogue {
     public int nextSecondDialogueId; // -1 para indicar fim do Stage
     public string[] triggers;
     public string sound;
+    public MultipleChoice[] multipleChoices;
+}
+
+[System.Serializable]
+public class MultipleChoice {
+    public int multipleChoiceId;
+    public string title;
+    [TextArea(3,10)]
+    public string description;
 }

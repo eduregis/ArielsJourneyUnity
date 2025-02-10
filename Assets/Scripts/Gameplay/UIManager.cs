@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
@@ -15,8 +16,14 @@ public class UIManager : MonoBehaviour {
     public CardFlip firstCardFlip;
     public CardFlip secondCardFlip;
     public ScrollText scrollText;
+    public GameObject leftMultipleChoicesContainer, rightMultipleChoicesContainer;
+    public List<Button> buttons;
 
     private bool hasntNullValues;
+    private Vector3 leftMCHiddenPosition = new (-250, 0, 0); // Posição escondida à esquerda
+    private Vector3 rightMCHiddenPosition = new(250, 0, 0); // Posição escondida à direita
+    private Vector3 leftMCVisiblePosition = new (250, 0, 0); // Posição visível à esquerda
+    private Vector3 rightMCVisiblePosition = new (-250, 0, 0);
 
     private void Awake() {
         QualitySettings.vSyncCount = 0;
@@ -42,9 +49,10 @@ public class UIManager : MonoBehaviour {
         hasntNullValues = 
             dialogue.firstCardText != "" &&  dialogue.firstCardImage != "" && 
             dialogue.secondCardText != "" &&  dialogue.secondCardImage != "";
-        Debug.Log("All values: " +  dialogue.firstCardText + ", " + dialogue.firstCardImage + ", " + dialogue.secondCardText + ", " + dialogue.secondCardImage);
         firstCard.SetActive(hasntNullValues);
         secondCard.SetActive(hasntNullValues);
+
+        //GetMultipleChoices(dialogue);
 
         GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Middle, 0.5f, () => {
             StartWritingText(dialogue.descriptionText);
@@ -54,8 +62,44 @@ public class UIManager : MonoBehaviour {
         });
     }
 
+    private void GetMultipleChoices(Dialogue dialogue) {
+        bool isMultipleChoices = dialogue.multipleChoices.Length > 0;
+        if (isMultipleChoices) {
+            StartCoroutine(AnimateMovement(leftMultipleChoicesContainer, leftMCVisiblePosition, 1f, () => {
+                Debug.Log("Animação do contêiner esquerdo concluída!");
+            }));
+
+            StartCoroutine(AnimateMovement(rightMultipleChoicesContainer, rightMCVisiblePosition, 1f, () => {
+                Debug.Log("Animação do contêiner direito concluída!");
+            }));
+            ShowButtons(dialogue.multipleChoices);
+        }
+        GameDataManager.SetMultipleChoices(isMultipleChoices);
+    }
+
+    private IEnumerator AnimateMovement(GameObject container, Vector3 targetPosition, float transitionTime, System.Action onComplete) {
+        float timeElapsed = 0;
+        Vector3 startPosition = container.transform.localPosition; // Usamos localPosition para trabalhar com coordenadas locais
+        while (timeElapsed < transitionTime) {
+            container.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, timeElapsed / transitionTime);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        container.transform.localPosition = targetPosition;
+        onComplete?.Invoke();
+    }
+
+    private void ShowButtons(MultipleChoice[] multipleChoices) {
+        foreach (var button in buttons) {
+            button.gameObject.SetActive(false);
+        }
+        for (int i = 0; i < multipleChoices.Length && i < buttons.Count; i++) {
+            buttons[i].gameObject.SetActive(true);
+            buttons[i].GetComponentInChildren<Text>().text = multipleChoices[i].title;
+        }
+    }
+
     private void StartWritingText(string text) {
-        // Começa a digitação do texto no pergaminho
         if (scrollText != null) {
             scrollText.TypeText(text);
         } else {
