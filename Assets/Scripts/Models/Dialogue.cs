@@ -20,6 +20,8 @@ public class Dialogue {
 public class MultipleChoice {
     public int multipleChoiceId;
     public string title;
+    
     [TextArea(3,10)]
     public string description;
+    public int nextDialogueId;
 }

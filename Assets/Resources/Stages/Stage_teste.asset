@@ -17,7 +17,7 @@ MonoBehaviour:
   nextStageId: 
   dialogues:
   - dialogueId: 0
-    descriptionText: Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
+    descriptionText: "Quanto \xE9 2+2?"
     firstCardText: 
     secondCardText: 
     firstCardImage: 
@@ -28,12 +28,25 @@ MonoBehaviour:
     sound: 
     multipleChoices:
     - multipleChoiceId: 0
-      title: ' Teste 1'
-      description: MC_01_Description_teste teste teste testeteste testeteste testeteste
-        testeteste teste
+      title: 4
+      description: acertou
     - multipleChoiceId: 1
-      title: Teste 2
-      description: MC_02_Description_teste teste teste testeteste testeteste testeteste
-        testeteste teste
+      title: 6
+      description: errou
+    - multipleChoiceId: 2
+      title: vapo
+      description: errou rude
+  - dialogueId: 1
+    descriptionText: Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
+      1
+    firstCardText: 
+    secondCardText: 
+    firstCardImage: 
+    secondCardImage: 
+    nextFirstDialogueId: 0
+    nextSecondDialogueId: 0
+    triggers: []
+    sound: 
+    multipleChoices: []
   backgroundName: 
   sound: 

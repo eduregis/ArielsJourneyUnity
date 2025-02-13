@@ -63,14 +63,8 @@ public class UIManager : MonoBehaviour {
     }
 
     private void GetMultipleChoices(Dialogue dialogue) {
-        StartCoroutine(AnimateMovement(leftMultipleChoicesContainer.GetComponent<RectTransform>(), leftMCVisiblePosition, 0.5f, () => {
-            Debug.Log("Animação do contêiner esquerdo concluída!");
-        }));
-
-        StartCoroutine(AnimateMovement(rightMultipleChoicesContainer.GetComponent<RectTransform>(), rightMCVisiblePosition, 0.5f, () => {
-            Debug.Log("Animação do contêiner direito concluída!");
-        }));
-
+        StartCoroutine(AnimateMovement(leftMultipleChoicesContainer.GetComponent<RectTransform>(), leftMCVisiblePosition, 0.5f, null));
+        StartCoroutine(AnimateMovement(rightMultipleChoicesContainer.GetComponent<RectTransform>(), rightMCVisiblePosition, 0.5f,  null));
         ShowButtons(dialogue.multipleChoices);
     }
 
@@ -87,12 +81,6 @@ public class UIManager : MonoBehaviour {
     }
 
     private void ShowButtons(MultipleChoice[] multipleChoices) {
-        Debug.Log($"Buttons.Count: {buttons.Count}, MultipleChoices.Length: {multipleChoices.Length}");
-
-        foreach (var choice in multipleChoices) {
-            Debug.Log($"Opção: {choice.title} , {choice.description}");
-        }
-
         // Desativa todos os botões antes de reativá-los
         foreach (var button in buttons) {
             button.gameObject.SetActive(false);
@@ -107,7 +95,6 @@ public class UIManager : MonoBehaviour {
             } else {
                 Debug.LogError($"TextMeshProUGUI não encontrado no botão {i}");
             }
-            Debug.Log($"Ativando botão {i} com texto: {multipleChoices[i].title}");
         }
     }
 
@@ -120,16 +107,12 @@ public class UIManager : MonoBehaviour {
     }
 
     public void HideMultipleChoicesContainers() {
-
         StartCoroutine(AnimateMovement(leftMultipleChoicesContainer.GetComponent<RectTransform>(), leftMCHiddenPosition, 0.5f, () => {
             foreach (var button in buttons) {
             button.gameObject.SetActive(false);
         }
         }));
-
         StartCoroutine(AnimateMovement(rightMultipleChoicesContainer.GetComponent<RectTransform>(), rightMCHiddenPosition, 0.5f, null));
-
-        
     }
 
     public void CompleteTyping() {
@@ -186,5 +169,16 @@ public class UIManager : MonoBehaviour {
     public void OnBackButtonPressed() {
         // Sua ação para o BackButton
         Debug.Log("Back Button Pressed");
+    }
+
+    public void OnMultipleChoiceSelected(int index) {
+        int nextDialogueId = actualDialogue.multipleChoices[index].nextDialogueId;
+        if (nextDialogueId != 0) {
+            GameStateManager.Instance.OnMultipleChoicesSelected(nextDialogueId);
+        } else {
+            string description = actualDialogue.multipleChoices[index].description;
+            StartWritingText(description);
+        }
+        
     }
 }

@@ -107,6 +107,10 @@ public class GameStateManager : MonoBehaviour {
         OnChoiceSelected(currentDialogue.nextFirstDialogueId);
     }
 
+    public void OnMultipleChoicesSelected(int nextDialogueId) {
+        OnChoiceSelected(nextDialogueId);
+    }
+
     private void OnChoiceSelected(int nextDialogueId) {
         UIManager.Instance.ClearText();
         scrollText.CloseScroll(() => {
