@@ -107,12 +107,17 @@ public class GameStateManager : MonoBehaviour {
         OnChoiceSelected(currentDialogue.nextFirstDialogueId);
     }
 
+    public void OnMultipleChoicesSelected(int nextDialogueId) {
+        OnChoiceSelected(nextDialogueId);
+    }
+
     private void OnChoiceSelected(int nextDialogueId) {
         UIManager.Instance.ClearText();
         scrollText.CloseScroll(() => {
             GameplayAnchorManager.Instance.MoveContainerToAnchor(GameplayAnchorType.Bottom, 0.5f, () => {
                 GameplayAnchorManager.Instance.ShowContainer(false);
                 UIManager.Instance.FlipCards();
+                UIManager.Instance.HideMultipleChoicesContainers();
                 GoToNextDialogue(nextDialogueId);
             });
         });

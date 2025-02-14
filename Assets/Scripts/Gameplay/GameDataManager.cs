@@ -10,6 +10,7 @@ public static class GameDataManager {
     public const string DialogueKey = "Dialogue";
     public const string HerosJourneyKey = "HerosJourney";
     public const string ArchetypesKey = "Archetypes";
+    public const string MultipleChoicesKey = "MultipleChoicesKey";
 
     // Inicializa as variáveis com valores padrão, se necessário
     public static void Initialize() {
@@ -40,6 +41,10 @@ public static class GameDataManager {
 
         if (!PlayerPrefs.HasKey(ArchetypesKey)) {
             PlayerPrefs.SetString(ArchetypesKey, "");
+        }
+
+        if (!PlayerPrefs.HasKey(ArchetypesKey)) {
+            PlayerPrefs.SetInt(MultipleChoicesKey, 0);
         }
 
         PlayerPrefs.Save();
@@ -84,7 +89,7 @@ public static class GameDataManager {
         PlayerPrefs.Save();
     }
 
-    // Métodos para Gerenciar Stage
+    // Métodos para Gerenciar Dialogue
     public static int GetDialogue() {
         return PlayerPrefs.GetInt(DialogueKey, 0);
     }
@@ -132,5 +137,16 @@ public static class GameDataManager {
             PlayerPrefs.SetString(ArchetypesKey, string.Join(",", archetypes));
             PlayerPrefs.Save();
         }
+    }
+
+    // Métodos para Gerenciar Dialogue
+    public static bool GetMultipleChoices() {
+        int value = PlayerPrefs.GetInt(DialogueKey, 0);
+        return value == 1;
+    }
+
+    public static void SetMultipleChoices(bool value) {
+        PlayerPrefs.SetInt(DialogueKey, value ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }
