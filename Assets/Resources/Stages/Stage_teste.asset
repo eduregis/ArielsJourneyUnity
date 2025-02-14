@@ -30,12 +30,15 @@ MonoBehaviour:
     - multipleChoiceId: 0
       title: 4
       description: acertou
+      nextDialogueId: 0
     - multipleChoiceId: 1
       title: 6
       description: errou
+      nextDialogueId: 0
     - multipleChoiceId: 2
       title: vapo
       description: errou rude
+      nextDialogueId: 2
   - dialogueId: 1
     descriptionText: Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
       1
@@ -43,6 +46,17 @@ MonoBehaviour:
     secondCardText: 
     firstCardImage: 
     secondCardImage: 
+    nextFirstDialogueId: 0
+    nextSecondDialogueId: 0
+    triggers: []
+    sound: 
+    multipleChoices: []
+  - dialogueId: 2
+    descriptionText: Serio msm? vapo?
+    firstCardText: Desculpa, vou tentar de novo
+    secondCardText: VTNC
+    firstCardImage: Ariel_card_002
+    secondCardImage: Ariel_card_002
     nextFirstDialogueId: 0
     nextSecondDialogueId: 0
     triggers: []
