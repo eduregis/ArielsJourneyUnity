@@ -36,8 +36,7 @@ public class GameStateManager : MonoBehaviour {
             Debug.LogError($"Stage {stageId} not found in Resources!");
             return;
         }
-        UIManager.Instance.ChangeBackground(currentStage.backgroundName);
-        Debug.Log(currentStage.sound);
+        UIManager.Instance.ChangeBackground(currentStage.backgroundName, currentStage.isInterlude);
         if (currentStage.sound != "") {
             AudioManager.Instance.Play(currentStage.sound);
         }

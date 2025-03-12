@@ -123,8 +123,18 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    public void ChangeBackground(string backgroundName) {
-        BackgroundManager.Instance.ChangeBackground(backgroundName);
+    public void ChangeBackground(string backgroundName, bool isInterlude) {
+        Debug.Log(backgroundName);
+        if (isInterlude) {
+            BackgroundManager.Instance.ChangeBackground("Ariel_gameplay_bkg_interlude");
+        } else {
+            BackgroundManager.Instance.ChangeBackground(backgroundName);
+        }
+        if (scrollText != null) {
+            scrollText.SetTextAndScrollColor(isInterlude);
+        } else {
+            Debug.LogError("ScrollText is not assigned in the UIManager!");
+        }
     }
 
     public void ClearText() {
@@ -140,10 +150,13 @@ public class UIManager : MonoBehaviour {
 
     public void FlipCards() {
         if (actualDialogue != null) {
-            bool isMultipleChoices = actualDialogue.multipleChoices.Length > 0;
-            if (isMultipleChoices) {
-            GetMultipleChoices(actualDialogue);
-            } 
+             bool isMultipleChoices = false;
+            if (actualDialogue.multipleChoices != null) {
+                isMultipleChoices = actualDialogue.multipleChoices.Length > 0;
+                if (isMultipleChoices) {
+                GetMultipleChoices(actualDialogue);
+                } 
+            }
             GameDataManager.SetMultipleChoices(isMultipleChoices);
         }
         firstCardFlip.FlipCard();

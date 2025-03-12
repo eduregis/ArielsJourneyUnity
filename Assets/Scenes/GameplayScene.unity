@@ -1453,8 +1453,11 @@ MonoBehaviour:
   typingSpeed: 0.05
   uiManager: {fileID: 113268981}
   scrollTop: {fileID: 611380962}
+  scrollTopImage: {fileID: 611380963}
   scrollBody: {fileID: 1212885910}
+  scrollBodyImage: {fileID: 1212885911}
   scrollBottom: {fileID: 798076165}
+  scrollBottomImage: {fileID: 798076166}
   animationDuration: 0.5
 --- !u!1 &635516199
 GameObject:

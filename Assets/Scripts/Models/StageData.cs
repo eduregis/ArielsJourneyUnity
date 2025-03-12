@@ -9,6 +9,7 @@ public class StageData : ScriptableObject {
     public List<Dialogue> dialogues;
     public string backgroundName;
     public string sound;
+    public bool isInterlude;
 
     public Dialogue GetDialogueById(int id) {
         return dialogues.Find(dialogue => dialogue.dialogueId == id);

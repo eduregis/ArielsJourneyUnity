@@ -3,14 +3,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ScrollText : MonoBehaviour {
     public TextMeshProUGUI textDisplay;  
     public float typingSpeed = 0.05f;
     public UIManager uiManager;
     public RectTransform scrollTop;      // Referência à parte superior do pergaminho
+    public Image scrollTopImage;  // Referência à imagem da parte superior do pergaminho
     public RectTransform scrollBody;    // Referência ao corpo do pergaminho
+    public Image scrollBodyImage; // Referência à imagem do corpo pergaminho
     public RectTransform scrollBottom;  // Referência à parte inferior do pergaminho
+    public Image scrollBottomImage;  // Referência à imagem da parte inferior do pergaminho
     public float animationDuration = 0.5f; // Duração da animação de abrir/fechar
 
     private Vector3 topStartPos;
@@ -36,6 +40,19 @@ public class ScrollText : MonoBehaviour {
         }
         topStartPos = scrollTop.anchoredPosition;
         bottomStartPos = scrollBottom.anchoredPosition;
+    }
+
+    private void ApplyScrollAlpha(Image image, bool isInterlude) {
+        Color imageColor = image.color;
+        imageColor.a = isInterlude ?  0f : 1f;
+        image.color = imageColor;
+    }
+
+    public void SetTextAndScrollColor(bool isInterlude) {
+        textDisplay.color = isInterlude ? Color.white : Color.black;
+        ApplyScrollAlpha(scrollTopImage, isInterlude);
+        ApplyScrollAlpha(scrollBodyImage, isInterlude);
+        ApplyScrollAlpha(scrollBottomImage, isInterlude);
     }
 
     public void TypeText(string text) {

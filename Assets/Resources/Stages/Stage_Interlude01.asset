@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageId: 0
   stageName: 
-  nextStageId: 1
+  nextStageId: 2
   dialogues:
   - dialogueId: 0
     descriptionText: 'Um sonho mujito louco ocorreu.
@@ -29,6 +29,7 @@ MonoBehaviour:
     triggers:
     - without_letter
     sound: 
+    multipleChoices: []
   - dialogueId: 0
     descriptionText: 
     firstCardText: 
@@ -39,5 +40,7 @@ MonoBehaviour:
     nextSecondDialogueId: 0
     triggers: []
     sound: 
+    multipleChoices: []
   backgroundName: Interlude
   sound: 
+  isInterlude: 1
